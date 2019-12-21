@@ -1,9 +1,17 @@
 /*Creating HEADER*/
-
+.header {
+    background-color: #FDF5E6;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+}
 .header--navigator {
     display: flex;
     justify-content: space-around;
     padding-left: 0;
+    padding-bottom: 15px;
 }
 
 /*Creating navigator submenu*/
@@ -45,7 +53,7 @@
 .header--reservation,
 .header--contact {
     border-right: 2px solid black;
-    width: 15%;
+    width: 13%;
     padding: 0 5% 0 5%;
 }
 .header--contact {
@@ -110,15 +118,68 @@ ul {
 .header--contact:hover {
     color: #D97373;
 }
-
+#manu {
+    display: none;
+}
 /*Logo decoration*/
 .header--logo {
     text-align: center;
-    padding: -10%;
     font-family: 'Allura', cursive;
     font-size: 50px;
+    margin-top: 0;
+    padding-top: 15px;
 }
 .header--logo a {
     text-decoration: none;
     color: black;
+}
+
+@media (max-width: 1200px) {
+    .header--dining {
+        display: none;
+    }
+
+    .header--hotel,
+    .header--hotel_about,
+    .header--hotel_design,
+    .header--hotel_neighborhood,
+    .header--hotel_park,
+    .header--hotel_history,
+    .header--rooms,
+    .header--rooms_citypremier,
+    .header--rooms_parkpremier,
+    .header--rooms_vip,
+    .header--rooms_doublelux,
+    .header--rooms_singlelux,
+    .header--rooms_economy,
+    .header--dining,
+    .header--events,
+    .header--events_weddings,
+    .header--events_dinnerparty,
+    .header--events_cocktailparty,
+    .header--events_brunches,
+    .header--events_meetings,
+    .header--reservation,
+    .header--contact {
+        font-size: 0.9em;
+    }
+
+    .header--hotel_submenu li,
+    .header--rooms_submenu li,
+    .header--events_submenu li {
+        margin-left: -120%;
+    }
+    .header--hotel_submenu li {
+        margin-left: -130%;
+    }
+    
+}
+
+@media (max-width: 730px) {
+    .header--logo {
+        display: none;
+    }
+    nav {
+        display: none;
+    }
 }

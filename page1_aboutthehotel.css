@@ -87,3 +87,21 @@
     text-align: justify;
     margin: 3%;
 }
+
+@media (max-width: 1200px) {
+    .hotel--description_information_first,
+    .hotel--description_information_second {
+        display: inline-block;
+        width: 100%;
+        margin: 0 10% 5% 10%;
+    }
+}
+
+@media (max-width: 950px) {
+    .hotel--description_design,
+    .hotel--description_neighborhood,
+    .hotel--description_park,
+    .hotel--description_history {
+        display: none;
+    }
+}

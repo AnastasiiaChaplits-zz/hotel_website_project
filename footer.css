@@ -1,0 +1,51 @@
+
+.footer--info {
+    display: flex;
+    justify-content: space-around;
+    background-color: #FDF5E6;
+    margin-top: 5%;
+    padding: 3%;
+}
+
+.footer--info_name {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.footer--info_hoteladdress,
+.footer--info_city {
+    font-size: 15px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.footer--info_contact {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.footer--info_telephone,
+.footer--info_fax,
+.footer--info_reservations {
+    font-family: 'Libre Baskerville', serif;
+    text-transform: uppercase;
+    display: block;
+    padding: 5px;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+}
+
+.footer--info_navigation {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.footer--info_policy,
+.footer--info_terms {
+    margin-top: 10px;
+}
+
