@@ -1,4 +1,5 @@
 /*Creating HEADER*/
+
 .header--navigator {
     display: flex;
     justify-content: space-around;
@@ -55,21 +56,65 @@
 ul {
     list-style: none;
 }
-li a {
+
+.header--hotel,
+.header--hotel_about,
+.header--hotel_design,
+.header--hotel_neighborhood,
+.header--hotel_park,
+.header--hotel_history,
+.header--rooms,
+.header--rooms_citypremier,
+.header--rooms_parkpremier,
+.header--rooms_vip,
+.header--rooms_doublelux,
+.header--rooms_singlelux,
+.header--rooms_economy,
+.header--dining,
+.header--events,
+.header--events_weddings,
+.header--events_dinnerparty,
+.header--events_cocktailparty,
+.header--events_brunches,
+.header--events_meetings,
+.header--reservation,
+.header--contact {
+    cursor: pointer;
     text-decoration: none;
     color: #676666;
     font-family: 'Libre Baskerville', serif;
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 
-li a:hover {
+.header--hotel:hover,
+.header--hotel_about:hover,
+.header--hotel_design:hover,
+.header--hotel_neighborhood:hover,
+.header--hotel_park:hover,
+.header--hotel_history:hover,
+.header--rooms:hover,
+.header--rooms_citypremier:hover,
+.header--rooms_parkpremier:hover,
+.header--rooms_vip:hover,
+.header--rooms_doublelux:hover,
+.header--rooms_singlelux:hover,
+.header--rooms_economy:hover,
+.header--dining:hover,
+.header--events:hover,
+.header--events_weddings:hover,
+.header--events_dinnerparty:hover,
+.header--events_cocktailparty:hover,
+.header--events_brunches:hover,
+.header--events_meetings:hover,
+.header--reservation:hover,
+.header--contact:hover {
     color: #D97373;
 }
 
 /*Logo decoration*/
 .header--logo {
     text-align: center;
-    padding: 3%;
+    padding: -10%;
     font-family: 'Allura', cursive;
     font-size: 50px;
 }

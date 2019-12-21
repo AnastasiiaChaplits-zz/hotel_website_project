@@ -1,22 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8"; http-equiv="Content-Type" content="text/html>
+	<meta name= "viewport" content="width=device-width, initial-scale=1">
 	<title>Milano Park Hotel</title>
 	<link rel="stylesheet" type="text/css" href="project.css">
 	<link href="https://fonts.googleapis.com/css?family=Allura&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
-	<link href="header.html" rel="import">
-	<link href="footer.html" rel="import">
+
+	<script>
+		function showContent(link) {
+
+			var cont = document.getElementById('contentBody');
+
+			var http = createRequestObject();
+			if( http )
+			{
+				http.open('get', link);
+				http.onreadystatechange = function ()
+				{
+					if(http.readyState == 4)
+					{
+						cont.innerHTML = http.responseText;
+					}
+				}
+				http.send(null);
+			}
+			else
+			{
+				document.location = link;
+			}
+		}
+
+		// создание ajax объекта
+		function createRequestObject()
+		{
+			try { return new XMLHttpRequest() }
+			catch(e)
+			{
+				try { return new ActiveXObject('Msxml2.XMLHTTP') }
+				catch(e)
+				{
+					try { return new ActiveXObject('Microsoft.XMLHTTP') }
+					catch(e) { return null; }
+				}
+			}
+		}
+	</script>
 </head>
 <body>
-<script>
-	var link = document.querySelector('link[rel=import]');
-	var content = link.import.querySelector('.header');
-	document.body.appendChild(content.cloneNode(true));
-</script>
 
+<header class="header">
+	<h1 class="header--logo"><a href="">Welcome to Milano Park Hotel</a></h1>
+	<nav>
+		<ul class="header--navigator">
+			<li class="header--hotel">Hotel
+				<ul class="header--hotel_submenu">
+					<li class="header--hotel_about" onclick="showContent('aboutthehotel_content.html')">About The Hotel</li>
+					<li class="header--hotel_design">Design</li>
+					<li class="header--hotel_neighborhood">Neighborhood</li>
+					<li class="header--hotel_park">Park</li>
+					<li class="header--hotel_history">History</li>
+				</ul>
+			</li>
+			<li class="header--rooms">Rooms
+				<ul class="header--rooms_submenu">
+					<li class="header--rooms_citypremier">City View Premier King</li>
+					<li class="header--rooms_parkpremier">Park View Premier King</li>
+					<li class="header--rooms_vip">VIP Rooms</li>
+					<li class="header--rooms_doublelux">Double Lux Rooms</li>
+					<li class="header--rooms_singlelux">Single Lux Rooms</li>
+					<li class="header--rooms_economy">Economy Rooms</li>
+				</ul>
+			</li>
+			<li class="header--dining">Dining</li>
+			<li class="header--events">Events
+				<ul class="header--events_submenu">
+					<li class="header--events_weddings">Weddings</li>
+					<li class="header--events_dinnerparty">Dinner Parties</li>
+					<li class="header--events_cocktailparty">Cocktail Parties</li>
+					<li class="header--events_brunches">Brunches</li>
+					<li class="header--events_meetings">Meetings</li>
+				</ul>
+			</li>
+			<li class="header--reservation">Reservation</li>
+			<li class="header--contact">Contact</li>
+		</ul>
+	</nav>
+</header>
+<div id="contentBody">
 	<main class="main--hotel" id="about_the_hotel">
 		<article class="main--hotel_description">
 			<section class="hotel--description">
@@ -56,13 +128,32 @@
 				</div>
 			</section>
 		</article>
-		
+
 	</main>
-<script>
-	var link = document.querySelector('link[rel=import]');
-	var content = link.import.querySelector('.footer');
-	document.body.appendChild(content.cloneNode(true));
-</script>
+</div>
+<footer class="footer">
+	<div class="footer--info">
+		<div class="footer--info_address">
+			<p class="footer--info_name">Milano park hotel</p>
+			<p class="footer--info_hoteladdress">2 lexington avenue</p>
+			<p class="footer--info_city">Milano 10010</p>
+		</div>
+		<div class="footer--info_contacts">
+			<div class="footer--info_contact">Contact</div>
+			<div class="footer--info_telephone">Telephone</div>
+			<div class="footer--info_telephone_namber">(163)112-2255</div>
+			<div class="footer--info_fax">Fax</div>
+			<div class="footer--info_fax_number">(163)114-1133</div>
+			<div class="footer--info_resertaions">Reservations</div>
+			<div class="footer--info_reservations_number">(866) 784-1300</div>
+		</div>
+		<div class="footer--info_navigation">
+			<div class="footer--info_policy">hotel policies</div>
+			<div class="footer--info_terms">terms and conditions</div>
+		</div>
+	</div>
+
+</footer>
+
 </body>
-<script type="text/javascript" src="project.js"></script>
 </html>
