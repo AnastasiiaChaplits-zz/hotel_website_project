@@ -1,0 +1,89 @@
+/*About Hotel Page Decoration*/
+.hotel--description {
+    padding-top: 50px;
+}
+.hotel--description_name {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-family: 'Libre Baskerville', serif;
+}
+.hotel--description_undername {
+    text-align: center;
+    font-family: 'Allura', cursive;
+}
+.hotel--description_information {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.hotel--description_information_first {
+    width: 30%;
+    margin: 0 5% 0 10%;
+    font-family: 'Libre Baskerville', serif;
+    text-align: justify;
+}
+.hotel--description_information_second {
+    width: 30%;
+    margin: 0 10% 0 5%;
+    font-family: 'Libre Baskerville', serif;
+    text-align: justify;
+}
+
+.hotel--description_information_design,
+.hotel--description_information_park {
+    width: 30%;
+    margin: 0 5% 0 10%;
+    padding: 5% 0 5% 0;
+}
+.hotel--description_information_neighborhood,
+.hotel--description_information_history {
+    width: 30%;
+    margin: 0 10% 0 5%;
+    padding: 5% 0 5% 0;
+
+}
+
+.hotel--description_information_design,
+.hotel--description_information_neighborhood,
+.hotel--description_information_park,
+.hotel--description_information_history {
+    margin-top: 10%;
+    border: 10px double grey;
+    padding: 5% 0 5% 0;
+    display: block;
+    text-align: center;
+}
+
+.hotel--description_information_design_picture,
+.hotel--description_information_neighborhood_picture,
+.hotel--description_information_park_picture,
+.hotel--description_information_history_picture {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hotel--description_design_name,
+.hotel--description_neighborhood_name,
+.hotel--description_park_name,
+.hotel--description_history_name {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.hotel--description_design_undername,
+.hotel--description_neighborhood_undername,
+.hotel--description_park_undername,
+.hotel--description_history_undername {
+    font-family: 'Allura', cursive;
+}
+
+.hotel--description_design,
+.hotel--description_neighborhood,
+.hotel--description_park,
+.hotel--description_history {
+    font-family: 'Libre Baskerville', serif;
+    text-align: justify;
+    margin: 3%;
+}

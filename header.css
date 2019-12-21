@@ -1,0 +1,79 @@
+/*Creating HEADER*/
+.header--navigator {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0;
+}
+
+/*Creating navigator submenu*/
+.header--hotel_submenu,
+.header--rooms_submenu,
+.header--events_submenu {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+}
+
+.header--hotel:hover > .header--hotel_submenu,
+.header--rooms:hover > .header--rooms_submenu,
+.header--events:hover > .header--events_submenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s ease;
+}
+
+/*Decoration navigator submenu */
+.header--hotel_submenu li,
+.header--rooms_submenu li,
+.header--events_submenu li {
+    text-align: center;
+    padding: 0;
+    margin-left: -100%;
+}
+.header--hotel_submenu li {
+    margin-left: -110%;
+}
+
+/*Creating horizontal menu strips*/
+.header--hotel,
+.header--rooms,
+.header--dining,
+.header--events,
+.header--reservation,
+.header--contact {
+    border-right: 2px solid black;
+    width: 15%;
+    padding: 0 5% 0 5%;
+}
+.header--contact {
+    border-right: none;
+}
+
+/*Decorating menu elements*/
+ul {
+    list-style: none;
+}
+li a {
+    text-decoration: none;
+    color: #676666;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.3em;
+}
+
+li a:hover {
+    color: #D97373;
+}
+
+/*Logo decoration*/
+.header--logo {
+    text-align: center;
+    padding: 3%;
+    font-family: 'Allura', cursive;
+    font-size: 50px;
+}
+.header--logo a {
+    text-decoration: none;
+    color: black;
+}
