@@ -16,16 +16,15 @@
 
 /*Creating navigator submenu*/
 .header--hotel_submenu,
-.header--rooms_submenu,
 .header--events_submenu {
-    display: none;
     opacity: 0;
     position: absolute;
     visibility: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .header--hotel:hover > .header--hotel_submenu,
-.header--rooms:hover > .header--rooms_submenu,
 .header--events:hover > .header--events_submenu {
     display: block;
     opacity: 1;
@@ -34,27 +33,29 @@
 }
 
 /*Decoration navigator submenu */
-.header--hotel_submenu li,
-.header--rooms_submenu li,
+
 .header--events_submenu li {
-    text-align: center;
-    padding: 0;
-    margin-left: -100%;
+    background-color: #FDF5E6;
+    margin-top: 2px;
+
 }
+
 .header--hotel_submenu li {
-    margin-left: -110%;
+    background-color: #FDF5E6;
+    margin-top: 2px;
+
 }
 
 /*Creating horizontal menu strips*/
 .header--hotel,
-.header--rooms,
 .header--dining,
 .header--events,
 .header--reservation,
 .header--contact {
     border-right: 2px solid black;
-    width: 13%;
-    padding: 0 5% 0 5%;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
 }
 .header--contact {
     border-right: none;
@@ -71,13 +72,6 @@ ul {
 .header--hotel_neighborhood,
 .header--hotel_park,
 .header--hotel_history,
-.header--rooms,
-.header--rooms_citypremier,
-.header--rooms_parkpremier,
-.header--rooms_vip,
-.header--rooms_doublelux,
-.header--rooms_singlelux,
-.header--rooms_economy,
 .header--dining,
 .header--events,
 .header--events_weddings,
@@ -100,13 +94,6 @@ ul {
 .header--hotel_neighborhood:hover,
 .header--hotel_park:hover,
 .header--hotel_history:hover,
-.header--rooms:hover,
-.header--rooms_citypremier:hover,
-.header--rooms_parkpremier:hover,
-.header--rooms_vip:hover,
-.header--rooms_doublelux:hover,
-.header--rooms_singlelux:hover,
-.header--rooms_economy:hover,
 .header--dining:hover,
 .header--events:hover,
 .header--events_weddings:hover,
@@ -118,9 +105,7 @@ ul {
 .header--contact:hover {
     color: #D97373;
 }
-#manu {
-    display: none;
-}
+
 /*Logo decoration*/
 .header--logo {
     text-align: center;
@@ -145,13 +130,6 @@ ul {
     .header--hotel_neighborhood,
     .header--hotel_park,
     .header--hotel_history,
-    .header--rooms,
-    .header--rooms_citypremier,
-    .header--rooms_parkpremier,
-    .header--rooms_vip,
-    .header--rooms_doublelux,
-    .header--rooms_singlelux,
-    .header--rooms_economy,
     .header--dining,
     .header--events,
     .header--events_weddings,
@@ -164,22 +142,6 @@ ul {
         font-size: 0.9em;
     }
 
-    .header--hotel_submenu li,
-    .header--rooms_submenu li,
-    .header--events_submenu li {
-        margin-left: -120%;
-    }
-    .header--hotel_submenu li {
-        margin-left: -130%;
-    }
-    
-}
 
-@media (max-width: 730px) {
-    .header--logo {
-        display: none;
-    }
-    nav {
-        display: none;
-    }
+    
 }

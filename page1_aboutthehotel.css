@@ -34,13 +34,12 @@
 .hotel--description_information_park {
     width: 30%;
     margin: 0 5% 0 10%;
-    padding: 5% 0 5% 0;
+
 }
 .hotel--description_information_neighborhood,
 .hotel--description_information_history {
     width: 30%;
     margin: 0 10% 0 5%;
-    padding: 5% 0 5% 0;
 
 }
 
@@ -50,17 +49,21 @@
 .hotel--description_information_history {
     margin-top: 10%;
     border: 10px double grey;
-    padding: 5% 0 5% 0;
     display: block;
     text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .hotel--description_information_design_picture,
 .hotel--description_information_neighborhood_picture,
 .hotel--description_information_park_picture,
-.hotel--description_information_history_picture {
+.hotel--description__information_history_picture {
     margin-left: auto;
     margin-right: auto;
+    width: 10em;
+    height: 10em;
+    margin-bottom: 5%;
 }
 
 .hotel--description_design_name,
@@ -84,6 +87,7 @@
 .hotel--description_park,
 .hotel--description_history {
     font-family: 'Libre Baskerville', serif;
+    font-size: 100%;
     text-align: justify;
     margin: 3%;
 }
@@ -95,9 +99,6 @@
         width: 100%;
         margin: 0 10% 5% 10%;
     }
-}
-
-@media (max-width: 950px) {
     .hotel--description_design,
     .hotel--description_neighborhood,
     .hotel--description_park,
