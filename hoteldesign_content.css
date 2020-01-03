@@ -1,0 +1,14 @@
+.main--design {
+    padding-top: 50px;
+}
+.main--design_name {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.main--design_undername {
+    text-align: center;
+    font-family: 'Allura', cursive;
+}

@@ -1,6 +1,7 @@
 @import "header.css";
-@import "page1_aboutthehotel.css";
+@import "aboutthehotel_content.css";
 @import "footer.css";
+@import "hoteldesign_content.css";
 
 body {
     width: 100%;
