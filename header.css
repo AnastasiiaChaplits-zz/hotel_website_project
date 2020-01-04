@@ -15,11 +15,17 @@
 }
 
 /*Creating navigator submenu*/
+.header--hotel,
+.header--events {
+    position: relative;
+}
 .header--hotel_submenu,
 .header--events_submenu {
     opacity: 0;
     position: absolute;
     visibility: hidden;
+    width: 100%;
+    margin-left: -40px;
 }
 
 .header--hotel:hover > .header--hotel_submenu,
@@ -28,7 +34,9 @@
     opacity: 1;
     visibility: visible;
     transition: 0.5s ease;
+
 }
+
 
 /*Decoration navigator submenu */
 
