@@ -1,3 +1,4 @@
+//function for images slide show on the main page
 function imagesGalleryHomePage() {
     let images = [];
     let i = 0;
