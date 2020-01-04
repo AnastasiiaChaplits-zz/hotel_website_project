@@ -59,7 +59,7 @@ article img{
 #image_switch5:checked ~ .main--design_gallery_arrows label:nth-child(4){
     background: url('Images/design page/prev.png') no-repeat;
     float: left;
-    margin: 0 0 0 -84px;
+    margin: 50px 0 0 -84px;
     display: block;
     height: 68px;
     width: 68px;
@@ -73,7 +73,7 @@ article img{
 #image_switch5:checked ~ .main--design_gallery_arrows label:nth-child(1){
     background: url('Images/design page/next.png') no-repeat;
     float: right;
-    margin: 0 -84px 0 0;
+    margin: 50px -84px 0 0;
     display: block;
     height: 68px;
     width: 68px;
@@ -110,9 +110,9 @@ label {
     margin-left: -400%;
 }
 
-/*position for arrows block*/
+/*position for radio buttons block*/
 .main--design_gallery_arrows {
-    margin: -25% 0 0 0;
+    margin: -27% 0 0 0;
     width: 100%;
     height: 50px;
 }
@@ -126,26 +126,24 @@ label {
     background: #bbb;
 }
 
-/*position for radiobutton*/
+/*position for radio buttons*/
 .main--design_gallery_arrows_active {
-    margin: 23% 0 0;
+    margin: 25% 0 0;
     text-align: center;
 }
 
 /*style when cursor is hover*/
 .main--design_gallery_arrows_active label:hover{
-    background: #76c8ff;
-    border-color: #777 !important;
+    background: #FF9999;
 }
 
-/*color when radiobutton is active*/
+/*style when radio button is active*/
 #image_switch1:checked ~ .main--design_gallery_arrows_active label:nth-child(1),
 #image_switch2:checked ~ .main--design_gallery_arrows_active label:nth-child(2),
 #image_switch3:checked ~ .main--design_gallery_arrows_active label:nth-child(3),
 #image_switch4:checked ~ .main--design_gallery_arrows_active label:nth-child(4),
 #image_switch5:checked ~ .main--design_gallery_arrows_active label:nth-child(5){
-    background: #18a3dd;
-    border-color: #18a3dd !important;
+    background: #D97373;
 }
 
 /*animation when images are changed*/

@@ -4,7 +4,6 @@
     <list default="true" id="2347933a-aaee-41c0-afdf-4c6d60f88bd0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hoteldesign_content.css" beforeDir="false" afterPath="$PROJECT_DIR$/hoteldesign_content.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hoteldesign_content.html" beforeDir="false" afterPath="$PROJECT_DIR$/hoteldesign_content.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,35 +17,30 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project.html">
+        <entry file="file://$PROJECT_DIR$/hoteldesign_content.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="93" column="48" selection-start-line="93" selection-start-column="48" selection-end-line="93" selection-end-column="48" />
+            <state relative-caret-position="102">
+              <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hoteldesign_content.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="112" selection-start-line="7" selection-start-column="112" selection-end-line="7" selection-end-column="112" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hoteldesign_content.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="1566">
+              <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hoteldesign_content.js">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/header.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="37" column="22" lean-forward="true" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="29" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -66,7 +60,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/project.js" />
         <option value="$PROJECT_DIR$/header.html" />
         <option value="$PROJECT_DIR$/footer.html" />
         <option value="$PROJECT_DIR$/page1_aboutthehotel.html" />
@@ -74,16 +67,17 @@
         <option value="$PROJECT_DIR$/header.css" />
         <option value="$PROJECT_DIR$/page1_aboutthehotel.css" />
         <option value="$PROJECT_DIR$/project.css" />
-        <option value="$PROJECT_DIR$/hoteldesign_content.js" />
-        <option value="$PROJECT_DIR$/project.html" />
         <option value="$PROJECT_DIR$/aboutthehotel_content.html" />
-        <option value="$PROJECT_DIR$/hoteldesign_content.css" />
+        <option value="$PROJECT_DIR$/project.js" />
+        <option value="$PROJECT_DIR$/project.html" />
+        <option value="$PROJECT_DIR$/hoteldesign_content.js" />
         <option value="$PROJECT_DIR$/hoteldesign_content.html" />
+        <option value="$PROJECT_DIR$/hoteldesign_content.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="676" />
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
@@ -99,17 +93,6 @@
             <path>
               <item name="Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project" type="462c0819:PsiDirectoryNode" />
-              <item name="Images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project" type="462c0819:PsiDirectoryNode" />
-              <item name="Images" type="462c0819:PsiDirectoryNode" />
-              <item name="design page" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -155,7 +138,7 @@
       <workItem from="1576926234110" duration="17626000" />
       <workItem from="1576944107955" duration="47000" />
       <workItem from="1577131094445" duration="5531000" />
-      <workItem from="1578076393168" duration="4864000" />
+      <workItem from="1578076393168" duration="20838000" />
     </task>
     <task id="LOCAL-00001" summary="created footer">
       <created>1576927807216</created>
@@ -220,20 +203,34 @@
       <option name="project" value="LOCAL" />
       <updated>1578079331220</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="created HTML for image gallery">
+      <created>1578081737125</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1578081737125</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added CSS to image gallery">
+      <created>1578096798687</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1578096798687</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29303000" />
+    <option name="totallyTimeSpent" value="45277000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.140625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13541667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="0" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.3289689" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
       <window_info anchor="bottom" id="Run" order="3" />
@@ -244,7 +241,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3289689" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -283,7 +280,9 @@
     <MESSAGE value="creating page 2 - Hotel Design" />
     <MESSAGE value="created h1 and h2 for design page" />
     <MESSAGE value="added images to gallery" />
-    <option name="LAST_COMMIT_MESSAGE" value="added images to gallery" />
+    <MESSAGE value="created HTML for image gallery" />
+    <MESSAGE value="added CSS to image gallery" />
+    <option name="LAST_COMMIT_MESSAGE" value="added CSS to image gallery" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.html">
@@ -301,27 +300,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/header.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="34" lean-forward="true" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="93" column="48" selection-start-line="93" selection-start-column="48" selection-end-line="93" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -339,20 +321,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/project.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/hoteldesign_content.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/hoteldesign_content.css">
+    <entry file="file://$PROJECT_DIR$/project.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="128">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="37" column="22" lean-forward="true" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hoteldesign_content.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="112" selection-start-line="7" selection-start-column="112" selection-end-line="7" selection-end-column="112" />
+        <state relative-caret-position="102">
+          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hoteldesign_content.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1566">
+          <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
         </state>
       </provider>
     </entry>
