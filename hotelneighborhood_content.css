@@ -1,0 +1,39 @@
+.hotel--neighborhood_name {
+    padding-top: 60px;
+    font-size: 2em;
+
+}
+
+.hotel--neighborhood_map {
+    margin: 5% auto;
+    text-align: center;
+    width: 100%;
+}
+
+.hotel--description_information_second li {
+    font-size: 15px;
+}
+
+.hotel--description_information_second ul {
+    list-style: square outside;
+}
+
+.hotel--neighborhood_map_google {
+    display: none;
+}
+
+@media (max-width: 650px) {
+.hotel--neighborhood_map {
+    display: none;
+}
+
+.hotel--neighborhood_map_google {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+}
+.hotel--neighborhood_map_google a {
+    text-decoration: none;
+    color: #D97373;
+}
+}

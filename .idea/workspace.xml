@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2347933a-aaee-41c0-afdf-4c6d60f88bd0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hoteldesign_content.html" beforeDir="false" afterPath="$PROJECT_DIR$/hoteldesign_content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aboutthehotel_content.html" beforeDir="false" afterPath="$PROJECT_DIR$/aboutthehotel_content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotelneighborhood_content.css" beforeDir="false" afterPath="$PROJECT_DIR$/hotelneighborhood_content.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotelneighborhood_content.html" beforeDir="false" afterPath="$PROJECT_DIR$/hotelneighborhood_content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.css" beforeDir="false" afterPath="$PROJECT_DIR$/project.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/project.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,17 +23,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="110" column="92" selection-start-line="110" selection-start-column="92" selection-end-line="110" selection-end-column="92" />
+            <state relative-caret-position="328">
+              <caret line="105" column="72" selection-start-line="105" selection-start-column="72" selection-end-line="105" selection-end-column="124" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hotelneighborhood_content.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="n#style#0;n#iframe#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aboutthehotel_content.css">
+        <entry file="file://$PROJECT_DIR$/hotelneighborhood_content.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="105" column="30" selection-start-line="105" selection-start-column="30" selection-end-line="105" selection-end-column="30" />
+            <state relative-caret-position="155">
+              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -38,26 +53,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aboutthehotel_content.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hoteldesign_content.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="54" column="61" selection-start-line="54" selection-start-column="61" selection-end-line="54" selection-end-column="61" />
+            <state relative-caret-position="459">
+              <caret line="27" column="123" selection-start-line="27" selection-start-column="123" selection-end-line="27" selection-end-column="123" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hoteldesign_content.css">
+        <entry file="file://$PROJECT_DIR$/hoteldesign_content.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="220" column="4" lean-forward="true" selection-start-line="220" selection-start-column="4" selection-end-line="220" selection-end-column="4" />
+            <state>
+              <caret column="44" selection-start-column="6" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aboutthehotel_content.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -67,9 +82,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -83,16 +98,18 @@
         <option value="$PROJECT_DIR$/footer.html" />
         <option value="$PROJECT_DIR$/page1_aboutthehotel.html" />
         <option value="$PROJECT_DIR$/page1_aboutthehotel.css" />
-        <option value="$PROJECT_DIR$/project.css" />
         <option value="$PROJECT_DIR$/project.js" />
         <option value="$PROJECT_DIR$/hoteldesign_content.js" />
         <option value="$PROJECT_DIR$/footer.css" />
-        <option value="$PROJECT_DIR$/hoteldesign_content.css" />
         <option value="$PROJECT_DIR$/header.css" />
-        <option value="$PROJECT_DIR$/aboutthehotel_content.html" />
         <option value="$PROJECT_DIR$/aboutthehotel_content.css" />
-        <option value="$PROJECT_DIR$/project.html" />
         <option value="$PROJECT_DIR$/hoteldesign_content.html" />
+        <option value="$PROJECT_DIR$/hoteldesign_content.css" />
+        <option value="$PROJECT_DIR$/project.css" />
+        <option value="$PROJECT_DIR$/project.html" />
+        <option value="$PROJECT_DIR$/aboutthehotel_content.html" />
+        <option value="$PROJECT_DIR$/hotelneighborhood_content.css" />
+        <option value="$PROJECT_DIR$/hotelneighborhood_content.html" />
       </list>
     </option>
   </component>
@@ -172,7 +189,7 @@
       <workItem from="1577131094445" duration="5531000" />
       <workItem from="1578076393168" duration="21646000" />
       <workItem from="1578127340218" duration="7020000" />
-      <workItem from="1578164922090" duration="572000" />
+      <workItem from="1578164922090" duration="4439000" />
     </task>
     <task id="LOCAL-00001" summary="created footer">
       <created>1576927807216</created>
@@ -293,11 +310,18 @@
       <option name="project" value="LOCAL" />
       <updated>1578133578621</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="added html and css for the next page">
+      <created>1578165732493</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1578165732493</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53677000" />
+    <option name="totallyTimeSpent" value="57544000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -344,7 +368,8 @@
     <MESSAGE value="added HTM to the description text on the page" />
     <MESSAGE value="added media query for the Design page and footer" />
     <MESSAGE value="added buttons &quot;find out more&quot; to the main page" />
-    <option name="LAST_COMMIT_MESSAGE" value="added buttons &quot;find out more&quot; to the main page" />
+    <MESSAGE value="added html and css for the next page" />
+    <option name="LAST_COMMIT_MESSAGE" value="added html and css for the next page" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.html">
@@ -357,13 +382,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/hoteldesign_content.js" />
-    <entry file="file://$PROJECT_DIR$/project.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="34" lean-forward="true" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/footer.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="393">
@@ -378,38 +396,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="110" column="92" selection-start-line="110" selection-start-column="92" selection-end-line="110" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hoteldesign_content.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="220" column="4" lean-forward="true" selection-start-line="220" selection-start-column="4" selection-end-line="220" selection-end-column="4" />
+        <state relative-caret-position="257">
+          <caret line="192" column="29" lean-forward="true" selection-start-line="192" selection-start-column="29" selection-end-line="192" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aboutthehotel_content.css">
+    <entry file="file://$PROJECT_DIR$/project.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="105" column="30" selection-start-line="105" selection-start-column="30" selection-end-line="105" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aboutthehotel_content.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="65" />
+        <state relative-caret-position="68">
+          <caret line="4" column="40" lean-forward="true" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hoteldesign_content.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="54" column="61" selection-start-line="54" selection-start-column="61" selection-end-line="54" selection-end-column="61" />
+        <state>
+          <caret column="44" selection-start-column="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="105" column="72" selection-start-line="105" selection-start-column="72" selection-end-line="105" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aboutthehotel_content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="123" selection-start-line="27" selection-start-column="123" selection-end-line="27" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aboutthehotel_content.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hotelneighborhood_content.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hotelneighborhood_content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="n#style#0;n#iframe#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
