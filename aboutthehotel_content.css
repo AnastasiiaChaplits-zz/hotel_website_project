@@ -106,3 +106,30 @@
         display: none;
     }
 }
+
+@media (max-width: 800px) {
+    .hotel--description_information_design_picture,
+    .hotel--description_information_neighborhood_picture,
+    .hotel--description_information_park_picture,
+    .hotel--description_information_history_picture {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .hotel--description_information_design,
+    .hotel--description_information_neighborhood,
+    .hotel--description_information_park,
+    .hotel--description_information_history  {
+        text-align: center;
+        margin: 5px auto;
+        width: 60%;
+    }
+
+    .hotel--description_design_name,
+    .hotel--description_neighborhood_name,
+    .hotel--description_park_name,
+    .hotel--description_history_name {
+        font-size: 15px;
+    }
+}

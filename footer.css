@@ -48,4 +48,14 @@
 .footer--info_terms {
     margin-top: 10px;
 }
+ @media (max-width: 700px) {
 
+     .footer--info {
+         display: block;
+         text-align: center;
+     }
+
+     .footer--info_contacts {
+         display: none;
+     }
+ }

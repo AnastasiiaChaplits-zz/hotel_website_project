@@ -167,3 +167,58 @@ label {
 .main--design_gallery_arrows label{
     transition: opacity 0.2s ease-out;
 }
+
+/*Description part*/
+.hotel-design_information {
+    margin-top: 50px;
+}
+
+.hotel--design_name {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.hotel--design_name span {
+    color: #D97373;
+}
+
+.hotel--design_information_description {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.hotel--design_information_first {
+    width: 30%;
+    margin: 0 5% 0 10%;
+    font-family: 'Libre Baskerville', serif;
+    text-align: justify;
+}
+
+.hotel--design_information_second {
+    width: 30%;
+    margin: 0 10% 0 5%;
+    font-family: 'Libre Baskerville', serif;
+    text-align: justify;
+}
+
+@media (max-width: 1200px) {
+    .hotel--design_information_first,
+    .hotel--design_information_second {
+        display: inline-block;
+        width: 100%;
+        margin: 0 10% 5% 10%;
+    }
+}
+
+@media (max-width: 900px) {
+    .main--design_gallery_arrows {
+        display: none;
+    }
+
+    .main--design_gallery_arrows_active {
+        margin: 5% 0 0;
+    }
+}
