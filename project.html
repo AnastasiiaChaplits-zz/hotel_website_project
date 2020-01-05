@@ -19,8 +19,7 @@
 			{
 				http.open('get', link);
 				http.onreadystatechange = function () {
-					if(http.readyState === 4)
-					{
+					if(http.readyState === 4) {
 						cont.innerHTML = http.responseText;
 					}
 				}
@@ -63,12 +62,11 @@
 					<li class="header--hotel_history" onclick="showContent('hotelhistory_content.html')">History</li>
 				</ul>
 			</li>
-			<li class="header--dining">Dining</li>
+			<li class="header--dining" onclick="showContent('hoteldining_content.html')">Dining</li>
 			<li class="header--events">Events
 				<ul class="header--events_submenu">
 					<li class="header--events_weddings">Weddings</li>
 					<li class="header--events_dinnerparty">Dinner Parties</li>
-					<li class="header--events_cocktailparty">Cocktail Parties</li>
 					<li class="header--events_brunches">Brunches</li>
 					<li class="header--events_meetings">Meetings</li>
 				</ul>
@@ -81,7 +79,7 @@
 <section class="wrapper">
 <div id="contentBody">
 	<div class="img_main_wrap">
-	<img src="" class="img_main" alt="hotel_photo">
+		<img src="" class="img_main" alt="hotel_photo">
 	</div>
 </div>
 <footer class="footer">
@@ -105,6 +103,7 @@
 
 </footer>
 </section>
-<script type="text/javascript" src="project.js"></script>
+<script src="project.js"></script>
+<script src="https://kit.fontawesome.com/69caacda2e.js" crossorigin="anonymous"></script>
 </body>
 </html>

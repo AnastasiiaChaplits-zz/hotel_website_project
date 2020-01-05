@@ -1,0 +1,161 @@
+.hotel--dining_name {
+    font-size: 30px;
+}
+
+.hotel--dining_images {
+    width: 25%;
+    height: 30%;
+    display: flex;
+}
+
+.hotel--dining_images img {
+    width: 100%;
+    border-radius: 25%;
+}
+
+.hotel--dining_images img:first-child {
+    opacity: 1;
+}
+
+.hotel--dining_popular_dishes {
+    margin-right: auto;
+    margin-left: auto;
+    width: 30%;
+    height: 20%;
+    background-color: #FDF5E6;
+    margin-top: 1%;
+    border: 2px solid white;
+}
+
+.hotel--dining_popular_dishes:hover {
+    border: 2px solid #D97373;
+}
+
+
+.hotel--dining_dishes {
+    width: 80%;
+    height: 60%;
+    text-align: center;
+    padding: 5%;
+    margin-left: 5%;
+    margin-right: auto;
+}
+
+.hotel--dining_dishes_name {
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    padding: 1%;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Photo gallery*/
+#photogallery {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+}
+
+.main--design_gallery_images {
+    margin-top: 5%;
+    width: 100%;
+}
+.main--design_gallery_image img {
+    height: 60%;
+    width: 80%;
+}
+
+#photogallery:not(:target) {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s;
+}
+
+#photogallery:target {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s;
+}
+
+.main--design_gallery_slider input {
+    display: none;
+}
+
+.fas {
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: white;
+    font-size: 50px;
+}
+
+/*Schedule block*/
+.hotel--dining_schedule_hours {
+    margin-right: auto;
+    margin-left: auto;
+    width: 30%;
+    height: 20%;
+    background-color: #FDF5E6;
+    margin-top: 1%;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.hotel--dining_schedule_hours:hover {
+    border: 2px solid #D97373;
+}
+
+.hotel--dining_working_hours {
+    margin-right: auto;
+    margin-left: auto;
+    width: 30%;
+    height: 20%;
+    background-color: #FDF5E6;
+    margin-top: 1%;
+    /*display: flex;*/
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 2px solid #D97373;
+    display: none;
+}
+
+.hotel--dining_working_hours h3 {
+    text-align: center;
+    font-size: 50px;
+    width: 100%;
+}
+
+.hotel--dining_working_hours div {
+    width: 40%;
+}
+
+.dining_day {
+    font-weight: bold;
+}
+
+.dining {
+    font-size: 18px;
+}
+.hotel--dining_schedule_hours p {
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    padding: 1%;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    .hotel--dining_images {
+        display: block;
+        width: 100%;
+    }
+}

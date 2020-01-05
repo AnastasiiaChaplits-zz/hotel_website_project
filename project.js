@@ -12,7 +12,7 @@ function imagesGalleryHomePage() {
         document.querySelector('.img_main').src = images[i];
         i++;
 
-        if (i == images.length) {
+        if (i === images.length) {
             i = 0;
         }
         setTimeout("viewImages()", 2000);
@@ -20,3 +20,6 @@ function imagesGalleryHomePage() {
 }
 let viewImages = imagesGalleryHomePage();
 viewImages();
+
+
+
