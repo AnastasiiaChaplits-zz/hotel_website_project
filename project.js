@@ -9,17 +9,20 @@ function imagesGalleryHomePage() {
     images[3] = "Images/main page/main_4.jpg";
 
     return function() {
-        document.querySelector('.img_main').src = images[i];
+        let imgMain = document.querySelector('.img_main');
+
+        if (!imgMain) {
+            return;
+        }
+
+        imgMain.src = images[i];
         i++;
 
         if (i === images.length) {
             i = 0;
         }
-        setTimeout("viewImages()", 2000);
+        setTimeout(viewImages, 2000);
     }
 }
 let viewImages = imagesGalleryHomePage();
 viewImages();
-
-
-

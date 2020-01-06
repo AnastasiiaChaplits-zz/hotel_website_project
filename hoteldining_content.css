@@ -120,7 +120,6 @@ a {
     height: 20%;
     background-color: #FDF5E6;
     margin-top: 1%;
-    /*display: flex;*/
     flex-wrap: wrap;
     justify-content: space-around;
     border: 2px solid #D97373;
@@ -153,9 +152,11 @@ a {
     font-weight: bold;
 }
 
+
 @media (max-width: 500px) {
     .hotel--dining_images {
         display: block;
         width: 100%;
     }
 }
+

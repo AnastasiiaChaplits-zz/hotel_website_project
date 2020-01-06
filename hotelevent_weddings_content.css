@@ -1,0 +1,74 @@
+/*For tabs on the page*/
+
+.hotel--wedding_tabs {
+    width: 49%;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+}
+
+.hotel--wedding_tabs > input {
+    display: none;
+}
+
+.hotel--wedding_tabs > div {
+    display: none;
+    padding: 12px;
+    border: 1px solid #C0C0C0;
+    background: #FFFFFF;
+}
+
+.hotel--wedding_tabs > label {
+    display: inline-block;
+    width: 31%;
+    padding: 7px;
+    margin: 0 -5px -1px 0;
+    text-align: center;
+    font-size: 25px;
+    color: #666666;
+    border: 1px solid #C0C0C0;
+    background: #E0E0E0;
+    cursor: pointer;
+}
+
+.hotel--wedding_tabs > input:checked + label {
+    color: #000000;
+    border: 1px solid #C0C0C0;
+    border-bottom: 1px solid #FFFFFF;
+    background: #FFFFFF;
+}
+
+#tab_1:checked ~ #txt_1,
+#tab_2:checked ~ #txt_2,
+#tab_3:checked ~ #txt_3,
+#tab_4:checked ~ #txt_4 {
+    display: block;
+}
+
+
+.hotel--wedding_information_first,
+.hotel--wedding_information_second {
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Libre Baskerville', serif;
+    text-align: justify;
+}
+
+.hotel--wedding_information_second p {
+    color: #D97373;
+}
+
+#txt_2 p {
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Libre Baskerville', serif;
+    text-align: justify;
+}
+
+@media(max-width: 1200px) {
+    .hotel--wedding_tabs > label {
+        width: 20%;
+        font-size: 15px;
+    }
+}

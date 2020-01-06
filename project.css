@@ -5,8 +5,7 @@
 @import "hotelneighborhood_content.css";
 @import "hotelhistory_content.css";
 @import "hoteldining_content.css";
-
-
+@import "hotelevent_weddings_content.css";
 /*decorating main page*/
 body,
 html {

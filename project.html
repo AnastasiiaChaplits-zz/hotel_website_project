@@ -7,20 +7,25 @@
 	<link rel="stylesheet" type="text/css" href="project.css">
 	<link href="https://fonts.googleapis.com/css?family=Allura&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
-
-
 	<script>
-		function showContent(link) {
+		function showContent(link, scriptLink) {
 
-			var cont = document.getElementById('contentBody');
+			let cont = document.getElementById('contentBody');
 
-			var http = createRequestObject();
+			let http = createRequestObject();
 			if( http )
 			{
 				http.open('get', link);
 				http.onreadystatechange = function () {
 					if(http.readyState === 4) {
 						cont.innerHTML = http.responseText;
+						window.scrollTo(0,0);
+
+						if (scriptLink) {
+							let newScript = document.createElement("script");
+							newScript.src = scriptLink;
+							document.querySelector('body').appendChild(newScript);
+						}
 					}
 				}
 				http.send(null);
@@ -62,12 +67,11 @@
 					<li class="header--hotel_history" onclick="showContent('hotelhistory_content.html')">History</li>
 				</ul>
 			</li>
-			<li class="header--dining" onclick="showContent('hoteldining_content.html')">Dining</li>
+			<li class="header--dining" onclick="showContent('hoteldining_content.html', 'hoteldining_content.js')">Dining</li>
 			<li class="header--events">Events
 				<ul class="header--events_submenu">
-					<li class="header--events_weddings">Weddings</li>
+					<li class="header--events_weddings" onclick="showContent('hotelevent_weddings_content.html')">Weddings</li>
 					<li class="header--events_dinnerparty">Dinner Parties</li>
-					<li class="header--events_brunches">Brunches</li>
 					<li class="header--events_meetings">Meetings</li>
 				</ul>
 			</li>
@@ -77,11 +81,13 @@
 	</nav>
 </header>
 <section class="wrapper">
+
 <div id="contentBody">
 	<div class="img_main_wrap">
 		<img src="" class="img_main" alt="hotel_photo">
 	</div>
 </div>
+
 <footer class="footer">
 	<div class="footer--info">
 		<div class="footer--info_address">

@@ -1,9 +1,13 @@
-//for Dining page - working hours
+//for Dining page - show working hours
 
-function workingHours() {
-    let workingHours = document.querySelector('.hotel--dining_working_hours');
-    workingHours.style.display = 'block';
-}
+(function() {
+    function workingHours() {
+        let workingHours = document.querySelector('.hotel--dining_working_hours');
+        workingHours.style.display = 'flex';
+    }
 
-let showWorkingHours = document.querySelector('.hotel--dining_schedule_hours');
-showWorkingHours.onclick = workingHours;
+    let showWorkingHours = document.querySelector('.hotel--dining_schedule_hours');
+    showWorkingHours.onclick = workingHours;
+}());
+
+
