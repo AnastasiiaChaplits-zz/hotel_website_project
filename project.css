@@ -15,26 +15,17 @@ html {
 }
 
 /*footer down*/
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-}
 
 #contentBody {
-    padding-top: 100px;
-    flex: 1 0 auto; /*footer down*/
-}
-
-.footer {
-    flex: 0 0 auto; /*footer down*/
+    padding-top: 140px;
+    min-height: calc(100vh - 290px);
 }
 
 /*inages gallery for the main page*/
 .img_main_wrap {
     width: 100%;
-    margin-top: 20px;
-    margin-bottom: -75px;
+    margin-top: -20px;
+    margin-bottom: -30px;
 }
 
 .img_main {

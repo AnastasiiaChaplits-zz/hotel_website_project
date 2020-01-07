@@ -1,13 +1,19 @@
 //for Dining page - show working hours
+let showWorkingHours = document.querySelector('.hotel--dining_schedule');
 
-(function() {
-    function workingHours() {
-        let workingHours = document.querySelector('.hotel--dining_working_hours');
-        workingHours.style.display = 'flex';
+showWorkingHours.addEventListener('click', function (event) {
+    let scheduleHoursElement = event.target.closest('.hotel--dining_schedule_hours');
+    if (!scheduleHoursElement) {
+        return;
+    }
+    if (scheduleHoursElement.nextElementSibling.style.display === 'flex') {
+        scheduleHoursElement.nextElementSibling.style.display = 'none';
+    } else {
+        scheduleHoursElement.nextElementSibling.style.display = 'flex';
+
     }
 
-    let showWorkingHours = document.querySelector('.hotel--dining_schedule_hours');
-    showWorkingHours.onclick = workingHours;
-}());
+
+});
 
 
