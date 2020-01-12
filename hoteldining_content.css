@@ -153,10 +153,20 @@ a {
     font-weight: bold;
 }
 
+@media (max-width: 790px) {
+    .hotel--dining_working_hours div {
+        width: 80%;
+        text-align: center;
+    }
+    .hotel--dining_schedule_hours {
+        width: 50%;
+    }
 
-@media (max-width: 500px) {
-    .hotel--dining_schedule {
-        display: none;
+    .hotel--dining_popular_dishes {
+        width: 50%;
+    }
+    .hotel--dining_working_hours {
+        width: 50%;
     }
 }
 
