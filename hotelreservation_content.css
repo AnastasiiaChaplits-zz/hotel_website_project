@@ -1,9 +1,14 @@
 #filters {
     display: flex;
+    justify-content: space-around;
 }
 .hotel--reservation_date {
     margin: 1%;
 }
-.hotel--room_type {
-    width: 20%;
+.hotel--guests_number {
+    margin: 1%;
+}
+
+#guests_number {
+    width: 100%;
 }
