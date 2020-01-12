@@ -15,9 +15,10 @@
 			let http = createRequestObject();
 			if( http )
 			{
-				http.open('get', link);
-				http.onreadystatechange = function () {
-					if(http.readyState === 4) {
+				http.open('get', link); //настройка запроса
+
+				http.onreadystatechange = function () { //обработчик событий который вызывается при изменении состояния запроса
+					if(http.readyState === 4) { //состояние документа 4 - завершён
 						cont.innerHTML = http.responseText;
 						window.scrollTo(0,0);
 
@@ -28,7 +29,7 @@
 						}
 					}
 				}
-				http.send(null);
+				http.send(null); //отправка запроса
 			}
 			else
 			{
@@ -71,7 +72,7 @@
 			<li class="header--events">Events
 				<ul class="header--events_submenu">
 					<li class="header--events_weddings" onclick="showContent('hotelevent_weddings_content.html')">Weddings</li>
-					<li class="header--events_dinnerparty">Dinner Parties</li>
+					<li class="header--events_dinnerparty" onclick="showContent('hoteldinnerparties_content.html')">Dinner Parties</li>
 					<li class="header--events_meetings">Meetings</li>
 				</ul>
 			</li>

@@ -155,9 +155,8 @@ a {
 
 
 @media (max-width: 500px) {
-    .hotel--dining_images {
-        display: block;
-        width: 100%;
+    .hotel--dining_schedule {
+        display: none;
     }
 }
 
