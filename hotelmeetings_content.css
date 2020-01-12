@@ -1,0 +1,64 @@
+.hotel--meetings_gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.hotel--meetings_gallery_boardroom,
+.hotel--meetings_gallery_meetingspace {
+    border: 1px solid black;
+    width: 30%;
+    height: 70%;
+    text-align: justify;
+    background-color: #FDF5E6;
+}
+
+.hotel--meetings_gallery_boardroom {
+    margin: 0 5% 0 10%;
+}
+
+.hotel--meetings_gallery_meetingspace {
+    margin: 0 10% 0 5%;
+}
+
+
+.hotel--boardroom_img,
+.hotel_meetingspace_img {
+    width: 80%;
+    height: 60%;
+    text-align: center;
+    padding: 5%;
+    margin-left: 5%;
+    margin-right: auto;
+}
+
+.hotel--boardroom,
+.hotel--meetingspace {
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    padding: 1%;
+    font-weight: bold;
+}
+
+@media(max-width: 550px) {
+    .hotel--meetings_gallery {
+        display: inline-block;
+    }
+
+    .hotel--meetings_gallery_boardroom,
+    .hotel--meetings_gallery_meetingspace {
+        margin: 1% auto;
+        width: 50%;
+    }
+}
+
+@media (max-width: 450px) {
+    .hotel--boardroom,
+    .hotel--meetingspace {
+        display: none;
+    }
+}
