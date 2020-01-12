@@ -1,0 +1,9 @@
+#filters {
+    display: flex;
+}
+.hotel--reservation_date {
+    margin: 1%;
+}
+.hotel--room_type {
+    width: 20%;
+}

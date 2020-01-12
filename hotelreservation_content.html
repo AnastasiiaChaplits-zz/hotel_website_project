@@ -1,10 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<main>
+    <header class="main--design_header">
+        <h1 class="hotel--description_name hotel--wedding_name">Reservation</h1>
+        <h2 class="hotel--description_undername">Find your perfect room here</h2>
+    </header>
+    <section id="filters">
+        <div class="hotel--reservation_date">
+        <label for="start_date">Start date:</label>
+        <input type="date" id="start_date" name="reservation_start"><br><br>
 
-</body>
-</html>
+        <label for="end_date">End Date:</label>
+        <input type="date" id="end_date" name="reservation_end">
+        </div>
+
+        <fieldset class="hotel--room_type">
+            <legend>Choose the room:</legend>
+            <div>
+                <input type="checkbox" name="room_type" id="milano_queen_room">
+                <label for="milano_queen_room">Milano Queen</label>
+            </div>
+            <div>
+                <input type="checkbox" name="room_type" id="lexington_link_room">
+                <label for="lexington_link_room">Lexington King</label>
+            </div>
+            <div>
+                <input type="checkbox" name="room_type" id="milano_double_room">
+                <label for="milano_double_room">Milano Double</label>
+            </div>
+            <div>
+                <input type="checkbox" name="room_type" id="lexington_premier_room">
+                <label for="lexington_premier_room">Lexington Premier King</label>
+            </div>
+            <div>
+                <input type="checkbox" name="room_type" id="park_view_room">
+                <label for="park_view_room">Park View Premier King</label>
+            </div>
+
+        </fieldset>
+
+    </section>
+</main>
