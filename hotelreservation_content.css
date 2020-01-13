@@ -76,6 +76,12 @@
     height: 50px;
 }
 
+.pagination_buttons > input:disabled{
+    background-color: lightgray;
+    opacity: 0.1;
+    margin: 2px;
+}
+
 @media (max-width: 1100px) {
     .hotel--reservation_room {
         width: 40%;
