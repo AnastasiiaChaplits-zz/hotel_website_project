@@ -15,11 +15,12 @@ function generateReservationTemplate(reservation) {
 "use strict";
 
 function generateReservationTemplate(reservation) {
-    return "\n        <div class=\"hotel--reservation_room\">\n            " +
-        "<img src=\"".concat(reservation.imageURL, "\" alt=\"Hotel_room\">\n            " +
-            "<p class=\"milano_queen_room\">").concat(reservation.name, "</p>\n            " +
-            "<p class=\"room_description\">").concat(reservation.description, "</p>\n            " +
-            "<p class=\"hotel--reserve_room\">Reserve now</p>\n        </div>\n    ");
+    return "<div class=\"hotel--reservation_room\">" +
+        "<img src=\"".concat(reservation.imageURL, "\" alt=\"Hotel_room\">" +
+            "<p class=\"milano_queen_room\">").concat(reservation.name, "</p>" +
+            "<p class=\"room_description\">").concat(reservation.description, "</p>" +
+            "<p class=\"hotel--reserve_room\">Reserve now</p>" +
+            "</div>");
 }
 
 var reservations = [{
