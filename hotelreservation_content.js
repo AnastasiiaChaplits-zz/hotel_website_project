@@ -114,6 +114,7 @@ var reservations = [{
 
     }];
 
+var matchedSearchReservations = reservations.slice();
 // global JavaScript variables
 
 var pageList = new Array();
@@ -124,7 +125,7 @@ var numberOfPages = 0;   // calculates the total number of pages
 //calculate number of pages
 
 function getNumberOfPages() {
-    return Math.ceil(reservations.length / numberPerPage);
+    return Math.ceil(matchedSearchReservations.length / numberPerPage);
 }
 
 numberOfPages = getNumberOfPages();
@@ -150,10 +151,10 @@ function firstPage() {
 
 //load current list
 function loadList() {
-    let begin = ((currentPage - 1) * numberPerPage);
-    let end = begin + numberPerPage;
+    var begin = ((currentPage - 1) * numberPerPage);
+    var end = begin + numberPerPage;
 
-    pageList = reservations.slice(begin, end);
+    pageList = matchedSearchReservations.slice(begin, end);
     drawList(); // draws out our data
     window.scrollTo(0, 0);
     check();         // determines the states of the pagination buttons
@@ -161,7 +162,7 @@ function loadList() {
 
 function drawList() {
     document.querySelector('#rooms').innerHTML = " ";
-    for (let r = 0; r < pageList.length; r++) {
+    for (var r = 0; r < pageList.length; r++) {
         document.querySelector('#rooms').innerHTML = pageList.map(generateReservationTemplate).join("");
     }
 }
@@ -173,6 +174,26 @@ function check() {
 }
 
     loadList();
+
+
+//filter on the page - checkbox
+
+var filtersForm = document.forms.filters;
+
+filtersForm.onchange = function() {
+    matchedSearchReservations = [];
+    var checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+
+    for (var i = 0; i < checkboxes.length; i++) {
+        matchedSearchReservations = matchedSearchReservations.concat(reservations.filter(function(reservation) {
+            var checkbox = checkboxes[i];
+            return reservation[checkbox.name] === checkbox.value;
+        }))
+    }
+
+    loadList();
+};
+
 
 
 

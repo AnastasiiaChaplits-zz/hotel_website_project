@@ -3,28 +3,28 @@
         <h1 class="hotel--description_name hotel--wedding_name">Reservation</h1>
         <h2 class="hotel--description_undername">Find your perfect room here</h2>
     </header>
-    <section id="filters">
+    <form id="filters" action="" method="post">
 
         <fieldset class="hotel--room_type">
             <legend>Choose the room:</legend>
             <div>
-                <input type="checkbox" name="room_type" id="milano_queen_room">
+                <input type="checkbox" name="name" id="milano_queen_room" value="Milano Queen">
                 <label for="milano_queen_room">Milano Queen</label>
             </div>
             <div>
-                <input type="checkbox" name="room_type" id="lexington_link_room">
+                <input type="checkbox" name="name" id="lexington_link_room" value="Lexington King">
                 <label for="lexington_link_room">Lexington King</label>
             </div>
             <div>
-                <input type="checkbox" name="room_type" id="milano_double_room">
+                <input type="checkbox" name="name" id="milano_double_room" value="Milano Double">
                 <label for="milano_double_room">Milano Double</label>
             </div>
             <div>
-                <input type="checkbox" name="room_type" id="lexington_premier_room">
+                <input type="checkbox" name="name" id="lexington_premier_room" value="Lexington Premier King">
                 <label for="lexington_premier_room">Lexington Premier King</label>
             </div>
             <div>
-                <input type="checkbox" name="room_type" id="park_view_room">
+                <input type="checkbox" name="name" id="park_view_room" value="Park View Premier King">
                 <label for="park_view_room">Park View Premier King</label>
             </div>
         </fieldset>
@@ -59,7 +59,7 @@
             <label for="end_date">End Date:</label>
             <input type="date" id="end_date" name="reservation_end">
         </div>
-    </section>
+    </form>
 
     <section>
         <article id="rooms">
