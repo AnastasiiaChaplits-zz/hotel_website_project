@@ -178,7 +178,7 @@ function check() {
 
 //filter on the page - checkbox
 
-var filtersForm = document.forms.filters;
+var filtersForm = document.forms.filters; //selected forms from HTML
 
 filtersForm.onchange = function() {
     matchedSearchReservations = [];
@@ -190,10 +190,10 @@ filtersForm.onchange = function() {
             return reservation[checkbox.name] === checkbox.value;
         }))
     }
-
+    numberOfPages = getNumberOfPages();
     loadList();
+
+
 };
-
-
 
 

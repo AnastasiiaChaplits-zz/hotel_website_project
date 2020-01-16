@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2347933a-aaee-41c0-afdf-4c6d60f88bd0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hotelreservation_content.html" beforeDir="false" afterPath="$PROJECT_DIR$/hotelreservation_content.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hotelreservation_content.js" beforeDir="false" afterPath="$PROJECT_DIR$/hotelreservation_content.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -38,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hotelreservation_content.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="196" lean-forward="true" selection-start-line="196" selection-end-line="196" />
+            <state relative-caret-position="444">
+              <caret line="192" column="39" selection-start-line="192" selection-start-column="39" selection-end-line="192" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -207,7 +206,7 @@
       <workItem from="1578866100077" duration="2000" />
       <workItem from="1578866532284" duration="2335000" />
       <workItem from="1578947047949" duration="9560000" />
-      <workItem from="1579198832065" duration="11723000" />
+      <workItem from="1579198832065" duration="13051000" />
     </task>
     <task id="LOCAL-00001" summary="created footer">
       <created>1576927807216</created>
@@ -482,11 +481,18 @@
       <option name="project" value="LOCAL" />
       <updated>1578956634480</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="added filter for checkbox - in progress">
+      <created>1579210878540</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1579210878540</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152989000" />
+    <option name="totallyTimeSpent" value="154317000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -545,7 +551,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added media query for the Design page and footer" />
     <MESSAGE value="added buttons &quot;find out more&quot; to the main page" />
     <MESSAGE value="added html and css for the next page" />
     <MESSAGE value="added html and css for the page &quot;Neighborhood&quot;" />
@@ -570,7 +575,8 @@
     <MESSAGE value="added template for generating umber of rooms on the page (for pagination)" />
     <MESSAGE value="added pagination to the Reservation page" />
     <MESSAGE value="added style for buttons when disabled" />
-    <option name="LAST_COMMIT_MESSAGE" value="added style for buttons when disabled" />
+    <MESSAGE value="added filter for checkbox - in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="added filter for checkbox - in progress" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.html">
@@ -763,8 +769,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hotelreservation_content.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="196" lean-forward="true" selection-start-line="196" selection-end-line="196" />
+        <state relative-caret-position="444">
+          <caret line="192" column="39" selection-start-line="192" selection-start-column="39" selection-end-line="192" selection-end-column="39" />
         </state>
       </provider>
     </entry>
