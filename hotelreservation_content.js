@@ -183,6 +183,7 @@ var filtersForm = document.forms.filters; //selected forms from HTML
 filtersForm.onchange = function() {
     matchedSearchReservations = [];
     var checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+    matchedSearchReservations = checkboxes.length ? [] : reservations;
 
     for (var i = 0; i < checkboxes.length; i++) {
         matchedSearchReservations = matchedSearchReservations.concat(reservations.filter(function(reservation) {
