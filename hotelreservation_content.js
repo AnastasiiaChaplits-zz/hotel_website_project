@@ -1,5 +1,7 @@
 //Client pagination
 
+/* TEMPLATE STRINGS DO NOT SUPPORTED BY IE
+
 function generateReservationTemplate(reservation) {
     return `
         <div class="hotel--reservation_room">
@@ -9,6 +11,15 @@ function generateReservationTemplate(reservation) {
             <p class="hotel--reserve_room">Reserve now</p>
         </div>
     `;
+}*/
+"use strict";
+
+function generateReservationTemplate(reservation) {
+    return "\n        <div class=\"hotel--reservation_room\">\n            " +
+        "<img src=\"".concat(reservation.imageURL, "\" alt=\"Hotel_room\">\n            " +
+            "<p class=\"milano_queen_room\">").concat(reservation.name, "</p>\n            " +
+            "<p class=\"room_description\">").concat(reservation.description, "</p>\n            " +
+            "<p class=\"hotel--reserve_room\">Reserve now</p>\n        </div>\n    ");
 }
 
 var reservations = [{

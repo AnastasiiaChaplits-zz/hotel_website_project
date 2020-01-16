@@ -37,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hotelreservation_content.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="192" column="39" selection-start-line="192" selection-start-column="39" selection-end-line="192" selection-end-column="39" />
+            <state relative-caret-position="323">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -206,7 +206,7 @@
       <workItem from="1578866100077" duration="2000" />
       <workItem from="1578866532284" duration="2335000" />
       <workItem from="1578947047949" duration="9560000" />
-      <workItem from="1579198832065" duration="13051000" />
+      <workItem from="1579198832065" duration="15193000" />
     </task>
     <task id="LOCAL-00001" summary="created footer">
       <created>1576927807216</created>
@@ -488,11 +488,25 @@
       <option name="project" value="LOCAL" />
       <updated>1579210878540</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="fixed pagination when using checkbox filter">
+      <created>1579212031089</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1579212031090</updated>
+    </task>
+    <task id="LOCAL-00042" summary="fixed error with no filter">
+      <created>1579212461125</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1579212461125</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154317000" />
+    <option name="totallyTimeSpent" value="156459000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -551,8 +565,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added buttons &quot;find out more&quot; to the main page" />
-    <MESSAGE value="added html and css for the next page" />
     <MESSAGE value="added html and css for the page &quot;Neighborhood&quot;" />
     <MESSAGE value="added HTML next page &quot;Park&quot;" />
     <MESSAGE value="made a duplicate of another page. changed images and text" />
@@ -576,7 +588,9 @@
     <MESSAGE value="added pagination to the Reservation page" />
     <MESSAGE value="added style for buttons when disabled" />
     <MESSAGE value="added filter for checkbox - in progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="added filter for checkbox - in progress" />
+    <MESSAGE value="fixed pagination when using checkbox filter" />
+    <MESSAGE value="fixed error with no filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed error with no filter" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.html">
@@ -753,13 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hotelreservation_content.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -767,10 +774,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/project.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hotelreservation_content.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="192" column="39" selection-start-line="192" selection-start-column="39" selection-end-line="192" selection-end-column="39" />
+        <state relative-caret-position="323">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
