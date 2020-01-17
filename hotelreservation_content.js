@@ -189,14 +189,14 @@ function check() {
     document.getElementById("first").disabled = currentPage === 1 ? true : false;
 }
 
-    loadList();
+loadList();
 
 
 //filter on the page
 
 var filtersForm = document.forms.filters; //selected forms from HTML
 
-filtersForm.onchange = function() {
+filtersForm.onchange = function () {
     matchedSearchReservations = [];
 
     var checkboxes = document.querySelectorAll('input[type=checkbox]:checked'); //filter Checkbox
@@ -212,17 +212,30 @@ filtersForm.onchange = function() {
     var selectedOption = document.querySelector('#guests_number').selectedIndex; //filter Select
     var guests = document.querySelector('#guests_number').options;
 
-    matchedSearchReservations = matchedSearchReservations.filter(function (reservation) {
-        return reservation.guests === guests[selectedOption].value;
-    });
+    if (guests[selectedOption].value === "all") {
+        matchedSearchReservations = matchedSearchReservations;
+    } else {
+        matchedSearchReservations = matchedSearchReservations.filter(function (reservation) {
+            return reservation.guests === guests[selectedOption].value;
+        });
+    }
 
+
+    /*
+        var radioButton = document.querySelectorAll('input[type=radio]'); //filter Checkbox
+
+        for (var j = 0; j < radioButton.length; j++) {
+            if (radioButton[j].checked) {
+            matchedSearchReservations = matchedSearchReservations.filter(function (reservation) {
+                return reservation.rooms === radioButton[j].value;
+            })
+        }
+        }*/
 
     numberOfPages = getNumberOfPages();
     loadList();
 
 };
-
-
 
 
 //filter on the page - date
