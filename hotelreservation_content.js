@@ -1,129 +1,117 @@
 //Client pagination
-
-/* TEMPLATE STRINGS DO NOT SUPPORTED BY IE
-
-function generateReservationTemplate(reservation) {
-    return `
-        <div class="hotel--reservation_room">
-            <img src="${reservation.imageURL}" alt="Hotel_room">
-            <p class="milano_queen_room">${reservation.name}</p>
-            <p class="room_description">${reservation.description}</p>
-            <p class="hotel--reserve_room">Reserve now</p>
-        </div>
-    `;
-}*/
 "use strict";
 
 function generateReservationTemplate(reservation) {
-    return "<div class=\"hotel--reservation_room\">" +
-        "<img src=\"".concat(reservation.imageURL, "\" alt=\"Hotel_room\">" +
-            "<p class=\"milano_queen_room\">").concat(reservation.name, "</p>" +
-            "<p class=\"room_description\">").concat(reservation.description, "</p>" +
-            "<p class=\"hotel--reserve_room\">Reserve now</p>" +
-            "</div>");
+    return '' +
+        '<div class="hotel--reservation_room">' +
+        '<img src="' + reservation.imageURL + '" alt="Hotel_room">' +
+        '<p class="milano_queen_room">' + reservation.name + '</p>' +
+        '<p class="room_description">' + reservation.description + '</p>' +
+        '<p class="hotel--reserve_room">Reserve now</p>' +
+        '</div>';
 }
 
 var reservations = [{
     imageURL: "Images/reservation%20page/reservation_room1.jpg",
     name: "Milano Queen",
     description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
-    guests: 1
+    guests: "one"
 },
     {
         imageURL: "Images/reservation%20page/reservation_room2.jpg",
         name: "Lexington King",
         description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
-        guests: 5
+        guests: "five"
     },
     {
         imageURL: "Images/reservation%20page/reservation_room3.jpg",
         name: "Milano Double",
         description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
-        guests: 3
+        guests: "three"
     },
     {
         imageURL: "Images/reservation%20page/reservation_room4.jpg",
         name: "Lexington Premier King",
         description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
-        guests: 2
+        guests: "two"
     },
     {
         imageURL: "Images/reservation%20page/reservation_room5.jpg",
         name: "Milano Queen",
         description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
-        guests: 6
+        guests: "six"
     },
     {
         imageURL: "Images/reservation%20page/reservation_room6.jpg",
         name: "Milano Queen",
         description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
-        guests: 3
+        guests: "three"
     },
     {
         imageURL: "Images/reservation%20page/reservation_room7.jpg",
         name: "Park View Premier King",
         description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
-        guests: 4,
+        guests: "four"
     },
     {
         imageURL: "Images/reservation%20page/reservation_room8.jpg",
         name: "Milano Queen",
         description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
-        guests: 2,
+        guests: "two"
     },
     {
         imageURL: "Images/reservation%20page/reservation_room9.jpg",
         name: "Lexington Premier King",
         description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
-        guests: 1
+        guests: "one"
     },
     {
         imageURL: "Images/reservation%20page/reservation_room10.jpg",
         name: "Lexington King",
         description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
-        guests: 6
+        guests: "six"
     },
     {
         imageURL: "Images/reservation%20page/reservation_room11.jpg",
         name: "Milano Queen",
         description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
-        guests: 3
+        guests: "three"
     },
     {
         imageURL: "Images/reservation%20page/reservation_room12.jpg",
         name: "MPark View Premier King",
         description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
-        guests: 4
+        guests: "four"
     },
     {
         imageURL: "Images/reservation%20page/reservation_room1.jpg",
         name: "Milano Double",
         description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
-        guests: 2
+        guests: "two"
     },
     {
         imageURL: "Images/reservation%20page/reservation_room1.jpg",
         name: "Milano Double",
         description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
-        guests: 6
+        guests: "six"
     },
     {
         imageURL: "Images/reservation%20page/reservation_room12.jpg",
         name: "MPark View Premier King",
         description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
-        guests: 2
+        guests: "two"
     },
     {
         imageURL: "Images/reservation%20page/reservation_room3.jpg",
         name: "Milano Double",
         description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
-        guests: 5
+        guests: "five"
     },
     {
         imageURL: "Images/reservation%20page/reservation_room2.jpg",
         name: "Lexington King",
         description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
-        guests: 3
+        guests: "three"
     }];
 
 var matchedSearchReservations = reservations.slice();
@@ -188,26 +176,37 @@ function check() {
     loadList();
 
 
-//filter on the page - checkbox
+//filter on the page
 
 var filtersForm = document.forms.filters; //selected forms from HTML
 
 filtersForm.onchange = function() {
     matchedSearchReservations = [];
-    var checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+
+    var checkboxes = document.querySelectorAll('input[type=checkbox]:checked'); //checkbox
     matchedSearchReservations = checkboxes.length ? [] : reservations;
 
     for (var i = 0; i < checkboxes.length; i++) {
-        matchedSearchReservations = matchedSearchReservations.concat(reservations.filter(function(reservation) {
+        matchedSearchReservations = matchedSearchReservations.concat(reservations.filter(function (reservation) {
             var checkbox = checkboxes[i];
             return reservation[checkbox.name] === checkbox.value;
         }))
     }
+
+    var selectedOption = document.querySelector('#guests_number').selectedIndex;
+    var guests = document.querySelector('#guests_number').options;
+
+    matchedSearchReservations = matchedSearchReservations.filter(function (reservation) {
+        return reservation.guests === guests[selectedOption].value;
+    });
+    console.log(matchedSearchReservations);
+
     numberOfPages = getNumberOfPages();
     loadList();
 
-
 };
+
+
 
 
 //filter on the page - date
