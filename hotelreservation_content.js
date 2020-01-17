@@ -26,104 +26,104 @@ function generateReservationTemplate(reservation) {
 var reservations = [{
     imageURL: "Images/reservation%20page/reservation_room1.jpg",
     name: "Milano Queen",
-    description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel."
-
+    description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
+    guests: 1
 },
     {
         imageURL: "Images/reservation%20page/reservation_room2.jpg",
         name: "Lexington King",
-        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel."
-
+        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
+        guests: 5
     },
     {
         imageURL: "Images/reservation%20page/reservation_room3.jpg",
         name: "Milano Double",
-        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel."
-
+        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
+        guests: 3
     },
     {
         imageURL: "Images/reservation%20page/reservation_room4.jpg",
         name: "Lexington Premier King",
-        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel."
-
+        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
+        guests: 2
     },
     {
         imageURL: "Images/reservation%20page/reservation_room5.jpg",
         name: "Milano Queen",
-        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel."
-
+        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
+        guests: 6
     },
     {
         imageURL: "Images/reservation%20page/reservation_room6.jpg",
         name: "Milano Queen",
-        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel."
-
+        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
+        guests: 3
     },
     {
         imageURL: "Images/reservation%20page/reservation_room7.jpg",
         name: "Park View Premier King",
-        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel."
-
+        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
+        guests: 4,
     },
     {
         imageURL: "Images/reservation%20page/reservation_room8.jpg",
         name: "Milano Queen",
-        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel."
-
+        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
+        guests: 2,
     },
     {
         imageURL: "Images/reservation%20page/reservation_room9.jpg",
         name: "Lexington Premier King",
-        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel."
-
+        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
+        guests: 1
     },
     {
         imageURL: "Images/reservation%20page/reservation_room10.jpg",
         name: "Lexington King",
-        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel."
-
+        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
+        guests: 6
     },
     {
         imageURL: "Images/reservation%20page/reservation_room11.jpg",
         name: "Milano Queen",
-        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel."
-
+        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
+        guests: 3
     },
     {
         imageURL: "Images/reservation%20page/reservation_room12.jpg",
         name: "MPark View Premier King",
-        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel."
-
+        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
+        guests: 4
     },
     {
         imageURL: "Images/reservation%20page/reservation_room1.jpg",
         name: "Milano Double",
-        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel."
-
+        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
+        guests: 2
     },
     {
         imageURL: "Images/reservation%20page/reservation_room1.jpg",
         name: "Milano Double",
-        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel."
-
+        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
+        guests: 6
     },
     {
         imageURL: "Images/reservation%20page/reservation_room12.jpg",
         name: "MPark View Premier King",
-        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel."
-
+        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
+        guests: 2
     },
     {
         imageURL: "Images/reservation%20page/reservation_room3.jpg",
         name: "Milano Double",
-        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel."
-
+        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
+        guests: 5
     },
     {
         imageURL: "Images/reservation%20page/reservation_room2.jpg",
         name: "Lexington King",
-        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel."
-
+        description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
+        guests: 3
     }];
 
 var matchedSearchReservations = reservations.slice();
@@ -210,3 +210,12 @@ filtersForm.onchange = function() {
 };
 
 
+//filter on the page - date
+/*
+Date.prototype.toDateInputValue = (function() {
+    var local = new Date(this);
+    local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+    return local.toJSON().slice(0,10);
+});
+
+document.getElementById('start_date').value = new Date().toDateInputValue();*/
