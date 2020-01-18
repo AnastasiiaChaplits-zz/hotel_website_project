@@ -4,20 +4,38 @@
 function generateReservationTemplate(reservation) {
     return '' +
         '<div class="hotel--reservation_room">' +
-        '<img src="' + reservation.imageURL + '" alt="Hotel_room">' +
-        '<p class="milano_queen_room">' + reservation.name + '</p>' +
-        '<p class="room_description">' + reservation.description + '</p>' +
-        '<p class="hotel--reserve_room">Reserve now</p>' +
+            '<img src="' + reservation.imageURL + '" alt="Hotel_room">' +
+            '<p class="milano_queen_room">' + reservation.name + '</p>' +
+            '<p class="room_description">' + reservation.description + '</p>' +
+            (isReserved(reservation) ? '<button class="hotel--reserve_room" disabled>Not Available</button>' : '<button class="hotel--reserve_room">Reserve now</button>') +
         '</div>';
 }
 
-var reservations = [{
-    imageURL: "Images/reservation%20page/reservation_room1.jpg",
-    name: "Milano Queen",
-    description: "123In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
-    guests: 1,
-    rooms: 1
-},
+function isReserved(reservation) {
+    return (reservation.reservedDates || []).some(function(date) {
+        var filterStartDate = Date.parse(document.querySelector('#start_date').value);
+        var filterEndDate = Date.parse(document.querySelector('#end_date').value);
+        var reservationStartDate = Date.parse(date.startDate);
+        var reservationEndDate = Date.parse(date.endDate);
+
+        return (
+            filterStartDate >= reservationStartDate && filterStartDate <= reservationEndDate
+        ) || (
+            filterEndDate >= reservationStartDate && filterEndDate <= reservationEndDate
+        ) || (
+            filterStartDate <= reservationStartDate && filterEndDate >= reservationEndDate
+        );
+    });
+}
+
+var reservations = [
+    {
+        imageURL: "Images/reservation%20page/reservation_room1.jpg",
+        name: "Milano Queen",
+        description: "123In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
+        guests: 1,
+        rooms: 1
+    },
     {
         imageURL: "Images/reservation%20page/reservation_room2.jpg",
         name: "Lexington King",
@@ -86,7 +104,13 @@ var reservations = [{
         name: "Milano Queen",
         description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
         guests: 3,
-        rooms: 1
+        rooms: 1,
+        reservedDates: [
+            {
+                startDate: '2020-01-08',
+                endDate: '2020-01-28'
+            }
+        ]
     },
     {
         imageURL: "Images/reservation%20page/reservation_room12.jpg",
@@ -129,7 +153,8 @@ var reservations = [{
         description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
         guests: 3,
         rooms: 2
-    }];
+    }
+    ];
 
 var matchedSearchReservations = reservations.slice();
 // global JavaScript variables
@@ -142,7 +167,7 @@ var numberOfPages = 0;   // calculates the total number of pages
 //calculate number of pages
 
 function updateNumberOfPages() {
-    return numberOfPages = Math.ceil(matchedSearchReservations.length / numberPerPage);
+    numberOfPages = Math.ceil(matchedSearchReservations.length / numberPerPage) || 1;
 }
 
 function updatePage(pageNumber) {
@@ -150,7 +175,6 @@ function updatePage(pageNumber) {
     loadList();
     window.scrollTo(0, 0);
 }
-
 
 //load current list
 function loadList() {
@@ -163,10 +187,7 @@ function loadList() {
 }
 
 function drawList() {
-    document.querySelector('#rooms').innerHTML = " ";
-    for (var r = 0; r < pageList.length; r++) {
-        document.querySelector('#rooms').innerHTML = pageList.map(generateReservationTemplate).join("");
-    }
+    document.querySelector('#rooms').innerHTML = pageList.map(generateReservationTemplate).join("");
 }
 
 function updatePaginator() {
@@ -181,6 +202,7 @@ var filtersForm = document.forms.filters; //selected forms from HTML
 filtersForm.oninput = function () {
     updateMatchedSearchReservations();
     updateNumberOfPages();
+    updatePage(1);
     loadList();
 };
 
