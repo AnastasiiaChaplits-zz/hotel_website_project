@@ -4,6 +4,7 @@
     <list default="true" id="2347933a-aaee-41c0-afdf-4c6d60f88bd0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hotelreservation_content.html" beforeDir="false" afterPath="$PROJECT_DIR$/hotelreservation_content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotelreservation_content.js" beforeDir="false" afterPath="$PROJECT_DIR$/hotelreservation_content.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,20 +26,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hotelreservation_content.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="34" column="46" lean-forward="true" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+            <state relative-caret-position="209">
+              <caret line="45" column="45" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hotelreservation_content.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="220" column="5" lean-forward="true" selection-start-line="220" selection-start-column="5" selection-end-line="220" selection-end-column="5" />
+            <state relative-caret-position="374">
+              <caret line="231" column="9" lean-forward="true" selection-start-line="231" selection-start-column="9" selection-end-line="231" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -103,8 +104,8 @@
         <option value="$PROJECT_DIR$/hoteldining_content.css" />
         <option value="$PROJECT_DIR$/hotelreservation_content.css" />
         <option value="$PROJECT_DIR$/hoteldining_content.js" />
-        <option value="$PROJECT_DIR$/hotelreservation_content.js" />
         <option value="$PROJECT_DIR$/hotelreservation_content.html" />
+        <option value="$PROJECT_DIR$/hotelreservation_content.js" />
       </list>
     </option>
   </component>
@@ -119,7 +120,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -136,6 +136,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -195,7 +196,8 @@
       <workItem from="1578947047949" duration="9560000" />
       <workItem from="1579198832065" duration="18859000" />
       <workItem from="1579289265894" duration="7910000" />
-      <workItem from="1579303867098" duration="131000" />
+      <workItem from="1579303867098" duration="190000" />
+      <workItem from="1579340372188" duration="1622000" />
     </task>
     <task id="LOCAL-00001" summary="created footer">
       <created>1576927807216</created>
@@ -526,11 +528,18 @@
       <option name="project" value="LOCAL" />
       <updated>1579303636473</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="fixed HTML for the filter">
+      <created>1579304048264</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1579304048264</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168567000" />
+    <option name="totallyTimeSpent" value="170248000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -589,7 +598,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added home page as images gallery with javascript" />
     <MESSAGE value="added margin to the main image to make it on the full screen" />
     <MESSAGE value="added Hours block on Dining page" />
     <MESSAGE value="added Hours block on Dining page&#10;fixed mistakes" />
@@ -614,7 +622,8 @@
     <MESSAGE value="added new key to the obj - guests" />
     <MESSAGE value="added filter - number of guests" />
     <MESSAGE value="fixed error with filter" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed error with filter" />
+    <MESSAGE value="fixed HTML for the filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed HTML for the filter" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.html">
@@ -801,17 +810,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hotelreservation_content.js">
+    <entry file="file://$PROJECT_DIR$/hotelreservation_content.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="220" column="5" lean-forward="true" selection-start-line="220" selection-start-column="5" selection-end-line="220" selection-end-column="5" />
+        <state relative-caret-position="209">
+          <caret line="45" column="45" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hotelreservation_content.html">
+    <entry file="file://$PROJECT_DIR$/hotelreservation_content.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="34" column="46" lean-forward="true" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+        <state relative-caret-position="374">
+          <caret line="231" column="9" lean-forward="true" selection-start-line="231" selection-start-column="9" selection-end-line="231" selection-end-column="9" />
         </state>
       </provider>
     </entry>

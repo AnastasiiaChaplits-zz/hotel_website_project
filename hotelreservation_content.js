@@ -221,16 +221,16 @@ filtersForm.onchange = function () {
     }
 
 
-    /*
-        var radioButton = document.querySelectorAll('input[type=radio]'); //filter Checkbox
-
+    var radioButton = document.querySelectorAll('input[type=radio]'); //filter Radio
+    if (radioButton) {
         for (var j = 0; j < radioButton.length; j++) {
             if (radioButton[j].checked) {
-            matchedSearchReservations = matchedSearchReservations.filter(function (reservation) {
-                return reservation.rooms === radioButton[j].value;
-            })
+                matchedSearchReservations = matchedSearchReservations.filter(function (reservation) {
+                    return reservation.rooms === radioButton[j].value;
+                })
+            }
         }
-        }*/
+    }
 
     numberOfPages = getNumberOfPages();
     loadList();
