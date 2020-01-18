@@ -90,7 +90,7 @@ var reservations = [{
     },
     {
         imageURL: "Images/reservation%20page/reservation_room12.jpg",
-        name: "MPark View Premier King",
+        name: "Park View Premier King",
         description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
         guests: "four"
     },
@@ -110,7 +110,7 @@ var reservations = [{
     },
     {
         imageURL: "Images/reservation%20page/reservation_room12.jpg",
-        name: "MPark View Premier King",
+        name: "Park View Premier King",
         description: "In these Guest Rooms, no detail is overlooked — bronze rods, brass door handles and finials were forged by the Hotel's creative genius, Julian Schnabel.",
         guests: "two",
         rooms: "one"
@@ -237,13 +237,22 @@ filtersForm.onchange = function () {
 
 };
 
+//search on the page
+function searchRooms() {
+    matchedSearchReservations = [];
+    var search = document.querySelector('#searchOption');
+    var filter = search.value.toUpperCase();
 
-//filter on the page - date
-/*
-Date.prototype.toDateInputValue = (function() {
-    var local = new Date(this);
-    local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
-    return local.toJSON().slice(0,10);
-});
 
-document.getElementById('start_date').value = new Date().toDateInputValue();*/
+    for(var i = 0; i < reservations.length; i++) {
+        var textValue = reservations[i].name;
+        if (textValue.toUpperCase().indexOf(filter) > -1) {
+            matchedSearchReservations.push(reservations[i]);
+        }
+
+    }
+
+    numberOfPages = getNumberOfPages();
+    loadList();
+
+}
