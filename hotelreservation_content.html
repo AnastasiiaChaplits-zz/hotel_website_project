@@ -30,30 +30,30 @@
         </fieldset>
 
         <div class="hotel--guests_number">
-            <select size="1" id="guests_number">
+            <label for="guests_number">Let us know how many people will come</label>
+            <select size="1" name="guests_number" id="guests_number">
                 <option selected value="all">Number of Guests</option>
-                <option value="one">1</option>
-                <option value="two">2</option>
-                <option value="three">3</option>
-                <option value="four">4</option>
-                <option value="five">5</option>
-                <option value="six">6</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
             </select>
         </div>
-
 
         <fieldset class="hotel--rooms_number">
             <legend>Number of rooms:</legend>
             <div>
-                <input type="radio" name="rooms_number" id="one_room" value="one">
+                <input type="radio" name="rooms_number" id="one_room" value="1">
                 <label for="one_room">1</label>
             </div>
             <div>
-                <input type="radio" name="rooms_number" id="two_rooms" value="two">
+                <input type="radio" name="rooms_number" id="two_rooms" value="2">
                 <label for="two_rooms">2</label>
             </div>
             <div>
-                <input type="radio" name="rooms_number" id="three_rooms" value="three">
+                <input type="radio" name="rooms_number" id="three_rooms" value="3">
                 <label for="three_rooms">3</label>
             </div>
 
@@ -66,20 +66,20 @@
             <label for="end_date">End Date:</label>
             <input type="date" id="end_date" name="reservation_end">
         </div>
-    </form>
 
-    <div class="search">
-    <input type="text" id="searchOption" placeholder="Search for rooms.." title="Type the name of the room" onkeyup="searchRooms()" >
-    </div>
+        <div class="search">
+            <label for="search"></label>
+            <input type="text" id="search" placeholder="Search for rooms.." title="Type the name of the room">
+        </div>
+    </form>
 
     <section>
         <article id="rooms">
         </article>
         <article class="pagination_buttons">
-            <input type="image" src="Images/reservation%20page/pagination%20icons/number-one-inside-a-circle.png" alt="go_to_first_page" id="first" onclick="firstPage()" value="first">
-            <input type="image" src="Images/reservation%20page/pagination%20icons/left-arrow.png" alt="arrow_left" id="previous" onclick="previousPage()" value="previous">
-            <input type="image" src="Images/reservation%20page/pagination%20icons/right-arrow.png" alt="arrow_right" id="next" onclick="nextPage()" value="next">
+            <input type="image" src="Images/reservation%20page/pagination%20icons/number-one-inside-a-circle.png" alt="go_to_first_page" id="first" onclick="updatePage(1)" value="first">
+            <input type="image" src="Images/reservation%20page/pagination%20icons/left-arrow.png" alt="arrow_left" id="previous" onclick="updatePage(currentPage - 1)" value="previous">
+            <input type="image" src="Images/reservation%20page/pagination%20icons/right-arrow.png" alt="arrow_right" id="next" onclick="updatePage(currentPage + 1)" value="next">
         </article>
     </section>
-
 </main>
