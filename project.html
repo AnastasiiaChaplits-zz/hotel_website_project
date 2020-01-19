@@ -12,44 +12,22 @@
 
 			let cont = document.getElementById('contentBody');
 
-			let http = createRequestObject();
-			if( http )
-			{
-				http.open('get', link); //настройка запроса
+			let http = new XMLHttpRequest();
+			http.open('get', link); //настройка запроса
 
-				http.onreadystatechange = function () { //обработчик событий который вызывается при изменении состояния запроса
-					if(http.readyState === 4) { //состояние документа 4 - завершён
-						cont.innerHTML = http.responseText;
-						window.scrollTo(0,0);
+			http.onreadystatechange = function () { //обработчик событий который вызывается при изменении состояния запроса
+				if(http.readyState === 4) { //состояние документа 4 - завершён
+					cont.innerHTML = http.responseText;
+					window.scrollTo(0,0);
 
-						if (scriptLink) {
-							let newScript = document.createElement("script");
-							newScript.src = scriptLink;
-							document.querySelector('body').appendChild(newScript);
-						}
+					if (scriptLink) {
+						let newScript = document.createElement("script");
+						newScript.src = scriptLink;
+						document.querySelector('body').appendChild(newScript);
 					}
 				}
-				http.send(null); //отправка запроса
-			}
-			else
-			{
-				document.location = link;
-			}
-		}
-
-		// создание ajax объекта
-		function createRequestObject()
-		{
-			try { return new XMLHttpRequest() }
-			catch(e)
-			{
-				try { return new ActiveXObject('Msxml2.XMLHTTP') }
-				catch(e)
-				{
-					try { return new ActiveXObject('Microsoft.XMLHTTP') }
-					catch(e) { return null; }
-				}
-			}
+			};
+			http.send(); //отправка запроса
 		}
 	</script>
 </head>
