@@ -7,7 +7,9 @@ function generateReservationTemplate(reservation) { //create a template for all 
             '<img src="' + reservation.imageURL + '" alt="Hotel_room">' +
             '<p class="milano_queen_room">' + reservation.name + '</p>' +
             '<p class="room_description">' + reservation.description + '</p>' +
-            (isReserved(reservation) ? '<button class="hotel--reserve_room" disabled>Not Available</button>' : '<button class="hotel--reserve_room">Reserve now</button>') +
+            '<p class="guests_number">Number of guests: ' + reservation.guests + '</p>' +
+            '<p class="rooms_number">Number of rooms: ' + reservation.rooms + '</p>' +
+            (isReserved(reservation) ? '<button class="hotel--reserve_room" disabled>Not Available</button>' : '<button class="hotel--reserve_room">Reserve now</button>') + //disable button if the room is reserved
         '</div>';
 }
 
