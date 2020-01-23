@@ -1,7 +1,7 @@
 //Client pagination
 "use strict";
 
-function generateReservationTemplate(reservation) {
+function generateReservationTemplate(reservation) { //create a template for all the rooms on the page
     return '' +
         '<div class="hotel--reservation_room">' +
             '<img src="' + reservation.imageURL + '" alt="Hotel_room">' +
@@ -11,7 +11,7 @@ function generateReservationTemplate(reservation) {
         '</div>';
 }
 
-function isReserved(reservation) {
+function isReserved(reservation) { //check if the room is available on the selected dates
     return (reservation.reservedDates || []).some(function(date) {
         var filterStartDate = Date.parse(document.querySelector('#start_date').value);
         var filterEndDate = Date.parse(document.querySelector('#end_date').value);
@@ -29,9 +29,9 @@ function isReserved(reservation) {
 }
 
 // global JavaScript variables
-var reservations = [];
-var matchedSearchReservations = [];
-var pageList = [];
+var reservations = []; //create array for all the reservations
+var matchedSearchReservations = []; //array for reservations after filter
+var pageList = []; //reservations on the page
 var currentPage = 1;
 var numberPerPage = 12;
 var numberOfPages = 0;   // calculates the total number of pages
@@ -48,41 +48,41 @@ function updatePage(pageNumber) {
     window.scrollTo(0, 0);
 }
 
-//load current list
+//load current list of rooms
 function loadList() {
     var begin = ((currentPage - 1) * numberPerPage);
     var end = begin + numberPerPage;
 
     pageList = matchedSearchReservations.slice(begin, end);
-    drawList(); // draws out our data
+    drawList(); // draws out rooms
     updatePaginator();         // determines the states of the pagination buttons
 }
 
-function drawList() {
+function drawList() { //create template for every room and add on the page
     document.querySelector('#rooms').innerHTML = pageList.map(generateReservationTemplate).join("");
 }
 
-function updatePaginator() {
+function updatePaginator() { //states of the pagination buttons
     document.getElementById("next").disabled = currentPage === numberOfPages;
     document.getElementById("previous").disabled = currentPage === 1;
     document.getElementById("first").disabled = currentPage === 1;
 }
 
 //filter on the page
-var filtersForm = document.forms.filters; //selected forms from HTML
+var filtersForm = document.forms.filters; //select form from HTML
 
-filtersForm.oninput = function () {
+filtersForm.oninput = function () { //update list of rooms when change filter
     updateMatchedSearchReservations();
     updateNumberOfPages();
     updatePage(1);
     loadList();
 };
 
-function updateMatchedSearchReservations() {
+function updateMatchedSearchReservations() { //update rooms that are matched to the filter
     matchedSearchReservations = [];
 
-    var checkboxes = document.querySelectorAll('input[type=checkbox]:checked'); //filter Checkbox
-    matchedSearchReservations = checkboxes.length ? [] : reservations;
+    var checkboxes = document.querySelectorAll('input[type=checkbox]:checked'); //filter Checkbox - by room name
+    matchedSearchReservations = checkboxes.length ? [] : reservations; //return initial reservation array if nothing selected
 
     for (var i = 0; i < checkboxes.length; i++) {
         matchedSearchReservations = matchedSearchReservations.concat(reservations.filter(function (reservation) {
@@ -91,7 +91,7 @@ function updateMatchedSearchReservations() {
         }));
     }
 
-    var selectedOption = document.querySelector('#guests_number').selectedIndex; //filter Select
+    var selectedOption = document.querySelector('#guests_number').selectedIndex; //filter Select - by number of guests
 
     if (selectedOption) {
         matchedSearchReservations = matchedSearchReservations.filter(function (reservation) {
@@ -100,7 +100,7 @@ function updateMatchedSearchReservations() {
     }
 
 
-    var checkedRadioButton = document.querySelector('input[type=radio]:checked'); //filter Radio
+    var checkedRadioButton = document.querySelector('input[type=radio]:checked'); //filter Radio - by number of rooms
 
     if (checkedRadioButton) {
         matchedSearchReservations = matchedSearchReservations.filter(function (reservation) {
@@ -108,14 +108,14 @@ function updateMatchedSearchReservations() {
         });
     }
 
-    var filter = document.querySelector('#search').value.toUpperCase();
+    var filter = document.querySelector('#search').value.toUpperCase(); //filter search - by room name or description
 
     matchedSearchReservations = matchedSearchReservations.filter(function (reservation) {
         return reservation.name.toUpperCase().includes(filter) || reservation.description.toUpperCase().includes(filter);
     });
 }
 
-(function () {
+(function () { //get JSON file with the reservations
     var http = new XMLHttpRequest();
     http.open('get', 'https://api.myjson.com/bins/w5xj0');
 

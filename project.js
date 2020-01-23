@@ -1,7 +1,7 @@
 //function for images slide show on the main page
 function imagesGalleryHomePage() {
-    let images = [];
-    let i = 0;
+    var images = [];
+    var i = 0;
 
     images[0] = "Images/main page/main_1.jpg";
     images[1] = "Images/main page/main_2.jpg";
@@ -9,7 +9,7 @@ function imagesGalleryHomePage() {
     images[3] = "Images/main page/main_4.jpg";
 
     return function() {
-        let imgMain = document.querySelector('.img_main');
+        var imgMain = document.querySelector('.img_main');
 
         if (!imgMain) {
             return;
@@ -24,5 +24,5 @@ function imagesGalleryHomePage() {
         setTimeout(viewImages, 2000);
     }
 }
-let viewImages = imagesGalleryHomePage();
+var viewImages = imagesGalleryHomePage();
 viewImages();

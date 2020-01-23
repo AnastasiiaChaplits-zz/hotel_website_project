@@ -1,8 +1,8 @@
 function showContent(link, scriptLink) {
 
-    let cont = document.getElementById('contentBody');
+    var cont = document.getElementById('contentBody');
 
-    let http = new XMLHttpRequest();
+    var http = new XMLHttpRequest();
     http.open('get', link); //настройка запроса
 
     http.onreadystatechange = function () { //обработчик событий который вызывается при изменении состояния запроса
@@ -11,7 +11,7 @@ function showContent(link, scriptLink) {
             window.scrollTo(0,0);
 
             if (scriptLink) {
-                let newScript = document.createElement("script");
+                var newScript = document.createElement("script");
                 newScript.src = scriptLink;
                 document.querySelector('body').appendChild(newScript);
             }

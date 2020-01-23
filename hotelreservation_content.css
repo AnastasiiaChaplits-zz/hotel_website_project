@@ -1,9 +1,10 @@
 /*Filter on the page*/
 #filters {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
 }
+
 .hotel--reservation_date {
     margin: 1%;
 }
@@ -33,8 +34,8 @@
 .hotel--reservation_room img {
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
-    height: 45%;
+    min-width: 80%;
+    min-height: 45%;
     margin-bottom: 5%;
     margin-top: 5%;
 }
