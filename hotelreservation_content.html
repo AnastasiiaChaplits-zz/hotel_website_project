@@ -83,13 +83,19 @@
 
     <form id="pop-up" action="" method="post">
         <div class="pop-up_form">
-            <input type="text" id="guest_name" placeholder="Name" required>
-            <input type="text" id="guest_surname" placeholder="Surname" required>
-            <input type="tel" id="guest_phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Telephone" required>
-            <p class="start_date">Start date:</p><p class="reservation_start_date"></p>
-            <p class="end_date">End date:</p><p class="reservation_end_date"></p>
-            <button type="submit" form="pop-up" value="Submit">Reserve</button>
-            <button onclick="closePopUp()" class="close_pop_up">Choose another room</button>
+            <div class="guest_information">
+                <input type="text" id="guest_name" placeholder="Name" required>
+                <input type="text" id="guest_surname" placeholder="Surname" required>
+                <input type="tel" id="guest_phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Telephone" required>
+            </div>
+            <div class="reservation_dates">
+                <div class="start_date">Start date: <span class="reservation_start_date"></span></div>
+                <div class="end_date">End date: <span class="reservation_end_date"></span></div>
+            </div>
+            <div class="reservation_buttons">
+                <button type="submit" form="pop-up" value="Submit">Reserve</button>
+                <button onclick="closePopUp()" class="close_pop_up">Choose another room</button>
+            </div>
         </div>
     </form>
 </main>

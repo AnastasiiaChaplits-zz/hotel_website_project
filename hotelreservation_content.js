@@ -134,16 +134,16 @@ function updateMatchedSearchReservations() { //update rooms that are matched to 
 
 //pop-up window
 var popUp = document.querySelector('#pop-up');
-var startDay = document.querySelector('reservation_start_date');
-startDay.innerHTML = document.querySelector('#start_date').value;
 function reserveRoom() {
     popUp.style.visibility = 'visible';
     popUp.style.opacity = '1';
-    popUp.style.transition = 'visibility 0s, opacity 0.5s linear'
+    popUp.style.transition = 'visibility 0s, opacity 0.5s linear';
+    document.querySelector('.reservation_start_date').innerHTML = document.querySelector('#start_date').value;
+    document.querySelector('.reservation_end_date').innerHTML = document.querySelector('#end_date').value;
 }
 
 function closePopUp() {
     popUp.style.visibility = 'hidden';
     popUp.style.opacity = '0';
-    popUp.style.transition = 'visibility 1s, opacity 0.5s linear'
+    popUp.style.transition = 'visibility 0.5s, opacity 0.5s linear';
 }
