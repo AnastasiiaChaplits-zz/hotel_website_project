@@ -3,7 +3,7 @@
         <h1 class="hotel--description_name hotel--wedding_name">Reservation</h1>
         <h2 class="hotel--description_undername">Find your perfect room here</h2>
     </header>
-    <form id="filters" action="" method="post">
+    <form id="filters">
         <fieldset class="hotel--room_type">
             <legend>Choose the room:</legend>
             <div>
@@ -81,7 +81,7 @@
         </article>
     </section>
 
-    <form id="pop-up" action="" method="post">
+    <form id="pop-up" onsubmit="reserveRoom(); return false">
         <div class="pop-up_form">
             <div class="guest_information">
                 <input type="text" id="guest_name" placeholder="Name" required>

@@ -9,7 +9,9 @@ function generateReservationTemplate(reservation) { //create a template for all 
             '<p class="room_description">' + reservation.description + '</p>' +
             '<p class="guests_number">Number of guests: ' + reservation.guests + '</p>' +
             '<p class="rooms_number">Number of rooms: ' + reservation.rooms + '</p>' +
-            (isReserved(reservation) ? '<button class="hotel--reserve_room" disabled>Not Available</button>' : '<button class="hotel--reserve_room" onclick="reserveRoom()">Reserve now</button>') + //disable button if the room is reserved
+            (isReserved(reservation)
+                ? '<button class="hotel--reserve_room" disabled>Not Available</button>'
+                : '<button class="hotel--reserve_room" onclick="openReservationPopUp(' + reservation.id + ')">Reserve now</button>') + //disable button if the room is reserved
         '</div>';
 }
 
@@ -117,9 +119,10 @@ function updateMatchedSearchReservations() { //update rooms that are matched to 
     });
 }
 
-(function () { //get JSON file with the reservations
+function updateReservationsJSON(method, body) { //get JSON file with the reservations
     var http = new XMLHttpRequest();
-    http.open('get', 'https://api.myjson.com/bins/w5xj0');
+    http.open(method, 'https://api.myjson.com/bins/w5xj0');
+    http.setRequestHeader('Content-type', 'application/json; charset=utf-8');
 
     http.onreadystatechange = function () {
         if(http.readyState === 4) {
@@ -129,21 +132,55 @@ function updateMatchedSearchReservations() { //update rooms that are matched to 
             loadList();
         }
     };
-    http.send(); //отправка запроса
-})();
+    http.send(body); //отправка запроса
+};
+updateReservationsJSON('get');
 
 //pop-up window
-var popUp = document.querySelector('#pop-up');
-function reserveRoom() {
-    popUp.style.visibility = 'visible';
-    popUp.style.opacity = '1';
-    popUp.style.transition = 'visibility 0s, opacity 0.5s linear';
-    document.querySelector('.reservation_start_date').innerHTML = document.querySelector('#start_date').value;
-    document.querySelector('.reservation_end_date').innerHTML = document.querySelector('#end_date').value;
+var popUpElement = document.querySelector('#pop-up');
+var reservationStartDate = document.querySelector('.reservation_start_date');
+var filterStartDate = document.querySelector('#start_date');
+var reservationEndDate = document.querySelector('.reservation_end_date');
+var filterEndDate = document.querySelector('#end_date');
+var activeRoom;
+
+function openReservationPopUp(id) {
+    activeRoom = reservations.find(function(room) {
+        return room.id === id;
+    });
+    popUpElement.style.visibility = 'visible';
+    popUpElement.style.opacity = '1';
+    popUpElement.style.transition = 'visibility 0s, opacity 0.5s linear';
+    reservationStartDate.innerHTML = filterStartDate.value;
+    reservationEndDate.innerHTML = filterEndDate.value;
 }
 
 function closePopUp() {
-    popUp.style.visibility = 'hidden';
-    popUp.style.opacity = '0';
-    popUp.style.transition = 'visibility 0.5s, opacity 0.5s linear';
+    popUpElement.style.visibility = 'hidden';
+    popUpElement.style.opacity = '0';
+    popUpElement.style.transition = 'visibility 0.5s, opacity 0.5s linear';
+}
+
+function reserveRoom() {
+    if (!activeRoom) {
+        return;
+    }
+
+    if (!activeRoom.reservedDates) {
+        activeRoom.reservedDates = [];
+    }
+
+    var name = document.querySelector('#guest_name').value;
+    var surname = document.querySelector('#guest_surname').value;
+    var phone = document.querySelector('#guest_phone').value;
+    var startDate = filterStartDate.value;
+    var endDate = filterEndDate.value;
+
+    var guestReservation = {
+        name, surname, phone, startDate, endDate
+    };
+
+    activeRoom.reservedDates.push(guestReservation);
+    updateReservationsJSON('put', JSON.stringify(reservations));
+    closePopUp();
 }
