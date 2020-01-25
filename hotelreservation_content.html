@@ -80,4 +80,16 @@
             <input type="image" src="Images/reservation%20page/pagination%20icons/right-arrow.png" alt="arrow_right" id="next" onclick="updatePage(currentPage + 1)" value="next">
         </article>
     </section>
+
+    <form id="pop-up" action="" method="post">
+        <div class="pop-up_form">
+            <input type="text" id="guest_name" placeholder="Name" required>
+            <input type="text" id="guest_surname" placeholder="Surname" required>
+            <input type="tel" id="guest_phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Telephone" required>
+            <p class="start_date">Start date:</p><p class="reservation_start_date"></p>
+            <p class="end_date">End date:</p><p class="reservation_end_date"></p>
+            <button type="submit" form="pop-up" value="Submit">Reserve</button>
+            <button onclick="closePopUp()" class="close_pop_up">Choose another room</button>
+        </div>
+    </form>
 </main>

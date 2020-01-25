@@ -9,7 +9,7 @@ function generateReservationTemplate(reservation) { //create a template for all 
             '<p class="room_description">' + reservation.description + '</p>' +
             '<p class="guests_number">Number of guests: ' + reservation.guests + '</p>' +
             '<p class="rooms_number">Number of rooms: ' + reservation.rooms + '</p>' +
-            (isReserved(reservation) ? '<button class="hotel--reserve_room" disabled>Not Available</button>' : '<button class="hotel--reserve_room">Reserve now</button>') + //disable button if the room is reserved
+            (isReserved(reservation) ? '<button class="hotel--reserve_room" disabled>Not Available</button>' : '<button class="hotel--reserve_room" onclick="reserveRoom()">Reserve now</button>') + //disable button if the room is reserved
         '</div>';
 }
 
@@ -131,3 +131,19 @@ function updateMatchedSearchReservations() { //update rooms that are matched to 
     };
     http.send(); //отправка запроса
 })();
+
+//pop-up window
+var popUp = document.querySelector('#pop-up');
+var startDay = document.querySelector('reservation_start_date');
+startDay.innerHTML = document.querySelector('#start_date').value;
+function reserveRoom() {
+    popUp.style.visibility = 'visible';
+    popUp.style.opacity = '1';
+    popUp.style.transition = 'visibility 0s, opacity 0.5s linear'
+}
+
+function closePopUp() {
+    popUp.style.visibility = 'hidden';
+    popUp.style.opacity = '0';
+    popUp.style.transition = 'visibility 1s, opacity 0.5s linear'
+}
