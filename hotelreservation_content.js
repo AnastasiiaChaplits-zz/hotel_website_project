@@ -1,41 +1,46 @@
 //Client pagination
 "use strict";
 
-function generateReservationTemplate(reservation) { //create a template for all the rooms on the page
+function generateReservationTemplate(room) { //create a template for all the rooms on the page
     return '' +
         '<div class="hotel--reservation_room">' +
-            '<img src="' + reservation.imageURL + '" alt="Hotel_room">' +
-            '<p class="milano_queen_room">' + reservation.name + '</p>' +
-            '<p class="room_description">' + reservation.description + '</p>' +
-            '<p class="guests_number">Number of guests: ' + reservation.guests + '</p>' +
-            '<p class="rooms_number">Number of rooms: ' + reservation.rooms + '</p>' +
-            (isReserved(reservation)
+            '<img src="' + room.imageURL + '" alt="Hotel_room">' +
+            '<p class="milano_queen_room">' + room.name + '</p>' +
+            '<p class="room_description">' + room.description + '</p>' +
+            '<p class="guests_number">Number of guests: ' + room.guests + '</p>' +
+            '<p class="rooms_number">Number of rooms: ' + room.rooms + '</p>' +
+            ((filterStartDate.value > filterEndDate.value)
+                ? '<button class="hotel--reserve_room" disabled>Choose dates</button>'
+                : (isReserved(room)
                 ? '<button class="hotel--reserve_room" disabled>Not Available</button>'
-                : '<button class="hotel--reserve_room" onclick="openReservationPopUp(' + reservation.id + ')">Reserve now</button>') + //disable button if the room is reserved
+                : '<button class="hotel--reserve_room" onclick="openReservationPopUp(' + room.id + ')">Reserve now</button>')) + //disable button if the room is reserved
         '</div>';
 }
 
-function isReserved(reservation) { //check if the room is available on the selected dates
-    return (reservation.reservedDates || []).some(function(date) {
+document.getElementById('start_date').valueAsDate = new Date(); //set start date to today
+
+function isReserved(room) { //check if the room is available on the selected dates
+    return (room.reservedDates || []).some(function(date) {
         var filterStartDate = Date.parse(document.querySelector('#start_date').value);
         var filterEndDate = Date.parse(document.querySelector('#end_date').value);
         var reservationStartDate = Date.parse(date.startDate);
         var reservationEndDate = Date.parse(date.endDate);
 
-        return (
-            filterStartDate >= reservationStartDate && filterStartDate <= reservationEndDate
-        ) || (
-            filterEndDate >= reservationStartDate && filterEndDate <= reservationEndDate
-        ) || (
-            filterStartDate <= reservationStartDate && filterEndDate >= reservationEndDate
-        );
+            return (
+                filterStartDate >= reservationStartDate && filterStartDate <= reservationEndDate
+            ) || (
+                filterEndDate >= reservationStartDate && filterEndDate <= reservationEndDate
+            ) || (
+                filterStartDate <= reservationStartDate && filterEndDate >= reservationEndDate
+            );
+
     });
 }
 
 // global JavaScript variables
-var reservations = []; //create array for all the reservations
-var matchedSearchReservations = []; //array for reservations after filter
-var pageList = []; //reservations on the page
+var rooms = []; //create array for all the rooms
+var matchedSearchReservations = []; //array for rooms after filter
+var pageList = []; //rooms on the page
 var currentPage = 1;
 var numberPerPage = 12;
 var numberOfPages = 0;   // calculates the total number of pages
@@ -86,20 +91,20 @@ function updateMatchedSearchReservations() { //update rooms that are matched to 
     matchedSearchReservations = [];
 
     var checkboxes = document.querySelectorAll('input[type=checkbox]:checked'); //filter Checkbox - by room name
-    matchedSearchReservations = checkboxes.length ? [] : reservations; //return initial reservation array if nothing selected
+    matchedSearchReservations = checkboxes.length ? [] : rooms; //return initial room array if nothing selected
 
     for (var i = 0; i < checkboxes.length; i++) {
-        matchedSearchReservations = matchedSearchReservations.concat(reservations.filter(function (reservation) {
+        matchedSearchReservations = matchedSearchReservations.concat(rooms.filter(function (room) {
             var checkbox = checkboxes[i];
-            return reservation.name === checkbox.value;
+            return room.name === checkbox.value;
         }));
     }
 
     var selectedOption = document.querySelector('#guests_number').selectedIndex; //filter Select - by number of guests
 
     if (selectedOption) {
-        matchedSearchReservations = matchedSearchReservations.filter(function (reservation) {
-            return reservation.guests === selectedOption;
+        matchedSearchReservations = matchedSearchReservations.filter(function (room) {
+            return room.guests === selectedOption;
         });
     }
 
@@ -107,27 +112,27 @@ function updateMatchedSearchReservations() { //update rooms that are matched to 
     var checkedRadioButton = document.querySelector('input[type=radio]:checked'); //filter Radio - by number of rooms
 
     if (checkedRadioButton) {
-        matchedSearchReservations = matchedSearchReservations.filter(function (reservation) {
-            return reservation.rooms === +checkedRadioButton.value;
+        matchedSearchReservations = matchedSearchReservations.filter(function (room) {
+            return room.rooms === +checkedRadioButton.value;
         });
     }
 
     var filter = document.querySelector('#search').value.toUpperCase(); //filter search - by room name or description
 
-    matchedSearchReservations = matchedSearchReservations.filter(function (reservation) {
-        return reservation.name.toUpperCase().includes(filter) || reservation.description.toUpperCase().includes(filter);
+    matchedSearchReservations = matchedSearchReservations.filter(function (room) {
+        return room.name.toUpperCase().includes(filter) || room.description.toUpperCase().includes(filter);
     });
 }
 
-function updateReservationsJSON(method, body) { //get JSON file with the reservations
+function updateReservationsJSON(method, body) { //get JSON file with the rooms
     var http = new XMLHttpRequest();
     http.open(method, 'https://api.myjson.com/bins/w5xj0');
     http.setRequestHeader('Content-type', 'application/json; charset=utf-8');
 
     http.onreadystatechange = function () {
         if(http.readyState === 4) {
-            reservations = JSON.parse(http.responseText);
-            matchedSearchReservations = reservations.slice();
+            rooms = JSON.parse(http.responseText);
+            matchedSearchReservations = rooms.slice();
             updateNumberOfPages();
             loadList();
         }
@@ -145,7 +150,7 @@ var filterEndDate = document.querySelector('#end_date');
 var activeRoom;
 
 function openReservationPopUp(id) {
-    activeRoom = reservations.find(function(room) {
+    activeRoom = rooms.find(function(room) {
         return room.id === id;
     });
     popUpElement.style.visibility = 'visible';
@@ -181,6 +186,6 @@ function reserveRoom() {
     };
 
     activeRoom.reservedDates.push(guestReservation);
-    updateReservationsJSON('put', JSON.stringify(reservations));
+    updateReservationsJSON('put', JSON.stringify(rooms));
     closePopUp();
 }
