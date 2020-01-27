@@ -17,7 +17,7 @@ function generateReservationTemplate(room) { //create a template for all the roo
         '</div>';
 }
 
-document.getElementById('start_date').valueAsDate = new Date(); //set start date to today
+document.getElementById('start_date').valueAsDate = new Date(); //set start reservation date to today
 
 function isReserved(room) { //check if the room is available on the selected dates
     return (room.reservedDates || []).some(function(date) {
@@ -120,11 +120,11 @@ function updateMatchedSearchReservations() { //update rooms that are matched to 
     var filter = document.querySelector('#search').value.toUpperCase(); //filter search - by room name or description
 
     matchedSearchReservations = matchedSearchReservations.filter(function (room) {
-        return room.name.toUpperCase().includes(filter) || room.description.toUpperCase().includes(filter);
+        return room.name.toUpperCase().indexOf(filter) > -1 || room.description.toUpperCase().indexOf(filter) > -1;
     });
 }
 
-function updateReservationsJSON(method, body) { //get JSON file with the rooms
+function updateReservationsJSON(method, body) { //get JSON file with the rooms and put reservation dates to JSON
     var http = new XMLHttpRequest();
     http.open(method, 'https://api.myjson.com/bins/w5xj0');
     http.setRequestHeader('Content-type', 'application/json; charset=utf-8');
@@ -138,7 +138,7 @@ function updateReservationsJSON(method, body) { //get JSON file with the rooms
         }
     };
     http.send(body); //отправка запроса
-};
+}
 updateReservationsJSON('get');
 
 //pop-up window
@@ -150,7 +150,7 @@ var filterEndDate = document.querySelector('#end_date');
 var activeRoom;
 
 function openReservationPopUp(id) {
-    activeRoom = rooms.find(function(room) {
+    activeRoom = rooms.filter(function(room) {
         return room.id === id;
     });
     popUpElement.style.visibility = 'visible';
@@ -182,7 +182,11 @@ function reserveRoom() {
     var endDate = filterEndDate.value;
 
     var guestReservation = {
-        name, surname, phone, startDate, endDate
+        name: name,
+        surname: surname,
+        phone: phone,
+        startDate: startDate,
+        endDate: endDate
     };
 
     activeRoom.reservedDates.push(guestReservation);
