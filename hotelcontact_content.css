@@ -1,0 +1,52 @@
+.contact--info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.contact--info_name {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.contact--info_hoteladdress,
+.contact--info_city {
+    font-size: 15px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.contact--info_telephone,
+.contact--info_fax,
+.contact--info_reservations {
+    font-family: 'Libre Baskerville', serif;
+    text-transform: uppercase;
+    display: block;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.contact--info_address,
+.contact--info_contacts {
+    background-color: #FDF5E6;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #D97373;
+    margin-top: 10px;
+}
+
+.contact_map {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.contact_map iframe {
+    width: 60%;
+}
+
+@media (max-width: 700px) {
+    .contact--info {
+        flex-wrap: wrap;
+    }
+
+}
