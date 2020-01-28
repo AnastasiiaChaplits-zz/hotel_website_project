@@ -1,26 +1,29 @@
-//Client pagination
 "use strict";
 
-function generateReservationTemplate(room) { //create a template for all the rooms on the page
+function generateReservationTemplate(apartment) { //create a template for all the rooms on the page
     return '' +
         '<div class="hotel--reservation_room">' +
-            '<img src="' + room.imageURL + '" alt="Hotel_room">' +
-            '<p class="milano_queen_room">' + room.name + '</p>' +
-            '<p class="room_description">' + room.description + '</p>' +
-            '<p class="guests_number">Number of guests: ' + room.guests + '</p>' +
-            '<p class="rooms_number">Number of rooms: ' + room.rooms + '</p>' +
-            ((filterStartDate.value > filterEndDate.value)
+            '<img src="' + apartment.imageURL + '" alt="Hotel_room">' +
+            '<p class="milano_queen_room">' + apartment.name + '</p>' +
+            '<p class="room_description">' + apartment.description + '</p>' +
+            '<p class="guests_number">Number of guests: ' + apartment.guests + '</p>' +
+            '<p class="rooms_number">Number of rooms: ' + apartment.rooms + '</p>' +
+            (areFilterDatesInvalid()
                 ? '<button class="hotel--reserve_room" disabled>Choose dates</button>'
-                : (isReserved(room)
-                ? '<button class="hotel--reserve_room" disabled>Not Available</button>'
-                : '<button class="hotel--reserve_room" onclick="openReservationPopUp(' + room.id + ')">Reserve now</button>')) + //disable button if the room is reserved
+                : (isReserved(apartment)
+                    ? '<button class="hotel--reserve_room" disabled>Not Available</button>'
+                    : '<button class="hotel--reserve_room" onclick="openReservationPopUp(' + apartment.id + ')">Reserve now</button>')) + //disable button if the room is reserved
         '</div>';
 }
 
-document.getElementById('start_date').valueAsDate = new Date(); //set start reservation date to today
+function areFilterDatesInvalid() {
+    return filterStartDate.value >= filterEndDate.value;
+}
 
-function isReserved(room) { //check if the room is available on the selected dates
-    return (room.reservedDates || []).some(function(date) {
+document.getElementById('start_date').valueAsDate = new Date(); //set filter start reservation date to today
+
+function isReserved(apartment) { //check if the room is available on the selected dates
+    return (apartment.reservedDates || []).some(function(date) {
         var filterStartDate = Date.parse(document.querySelector('#start_date').value);
         var filterEndDate = Date.parse(document.querySelector('#end_date').value);
         var reservationStartDate = Date.parse(date.startDate);
@@ -37,9 +40,9 @@ function isReserved(room) { //check if the room is available on the selected dat
     });
 }
 
-// global JavaScript variables
-var rooms = []; //create array for all the rooms
-var matchedSearchReservations = []; //array for rooms after filter
+//Client pagination
+var allApartments = []; //create array for all the rooms
+var matchedSearchReservations = []; //array for rooms with filter applied
 var pageList = []; //rooms on the page
 var currentPage = 1;
 var numberPerPage = 12;
@@ -63,7 +66,7 @@ function loadList() {
     var end = begin + numberPerPage;
 
     pageList = matchedSearchReservations.slice(begin, end);
-    drawList(); // draws out rooms
+    drawList(); // draw out rooms
     updatePaginator();         // determines the states of the pagination buttons
 }
 
@@ -78,7 +81,7 @@ function updatePaginator() { //states of the pagination buttons
 }
 
 //filter on the page
-var filtersForm = document.forms.filters; //select form from HTML
+var filtersForm = document.querySelector('#filters'); //select form from HTML
 
 filtersForm.oninput = function () { //update list of rooms when change filter
     updateMatchedSearchReservations();
@@ -87,24 +90,25 @@ filtersForm.oninput = function () { //update list of rooms when change filter
     loadList();
 };
 
-function updateMatchedSearchReservations() { //update rooms that are matched to the filter
-    matchedSearchReservations = [];
+filtersForm.onsubmit = function(event) { //prevent page refresh
+    event.preventDefault();
+};
 
+function updateMatchedSearchReservations() { //update rooms that are matched to the filter
     var checkboxes = document.querySelectorAll('input[type=checkbox]:checked'); //filter Checkbox - by room name
-    matchedSearchReservations = checkboxes.length ? [] : rooms; //return initial room array if nothing selected
+    matchedSearchReservations = checkboxes.length ? [] : allApartments; //return initial room array if nothing selected
 
     for (var i = 0; i < checkboxes.length; i++) {
-        matchedSearchReservations = matchedSearchReservations.concat(rooms.filter(function (room) {
-            var checkbox = checkboxes[i];
-            return room.name === checkbox.value;
+        matchedSearchReservations = matchedSearchReservations.concat(allApartments.filter(function (apartment) {
+            return apartment.name === checkboxes[i].value;
         }));
     }
 
     var selectedOption = document.querySelector('#guests_number').selectedIndex; //filter Select - by number of guests
 
     if (selectedOption) {
-        matchedSearchReservations = matchedSearchReservations.filter(function (room) {
-            return room.guests === selectedOption;
+        matchedSearchReservations = matchedSearchReservations.filter(function (apartment) {
+            return apartment.guests === selectedOption;
         });
     }
 
@@ -112,27 +116,27 @@ function updateMatchedSearchReservations() { //update rooms that are matched to 
     var checkedRadioButton = document.querySelector('input[type=radio]:checked'); //filter Radio - by number of rooms
 
     if (checkedRadioButton) {
-        matchedSearchReservations = matchedSearchReservations.filter(function (room) {
-            return room.rooms === +checkedRadioButton.value;
+        matchedSearchReservations = matchedSearchReservations.filter(function (apartment) {
+            return apartment.rooms === +checkedRadioButton.value;
         });
     }
 
-    var filter = document.querySelector('#search').value.toUpperCase(); //filter search - by room name or description
+    var search = document.querySelector('#search').value.toUpperCase(); //filter search - by room name or description
 
-    matchedSearchReservations = matchedSearchReservations.filter(function (room) {
-        return room.name.toUpperCase().indexOf(filter) > -1 || room.description.toUpperCase().indexOf(filter) > -1;
+    matchedSearchReservations = matchedSearchReservations.filter(function (apartment) {
+        return apartment.name.toUpperCase().indexOf(search) > -1 || apartment.description.toUpperCase().indexOf(search) > -1;
     });
 }
 
-function updateReservationsJSON(method, body) { //get JSON file with the rooms and put reservation dates to JSON
+function updateReservationsJSON(method, body) { //get JSON file with the apartments or put reservation dates to JSON
     var http = new XMLHttpRequest();
     http.open(method, 'https://api.myjson.com/bins/w5xj0');
-    http.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+    http.setRequestHeader('Content-type', 'application/json; charset=utf-8'); //добавление заголовков пользователя
 
     http.onreadystatechange = function () {
         if(http.readyState === 4) {
-            rooms = JSON.parse(http.responseText);
-            matchedSearchReservations = rooms.slice();
+            allApartments = JSON.parse(http.responseText);
+            updateMatchedSearchReservations();
             updateNumberOfPages();
             loadList();
         }
@@ -147,12 +151,13 @@ var reservationStartDate = document.querySelector('.reservation_start_date');
 var filterStartDate = document.querySelector('#start_date');
 var reservationEndDate = document.querySelector('.reservation_end_date');
 var filterEndDate = document.querySelector('#end_date');
-var activeRoom;
+var activeApartment;
 
 function openReservationPopUp(id) {
-    activeRoom = rooms.filter(function(room) {
-        return room.id === id;
-    });
+    activeApartment = allApartments.filter(function(apartment) {
+        return apartment.id === id;
+    })[0];
+
     popUpElement.style.visibility = 'visible';
     popUpElement.style.opacity = '1';
     popUpElement.style.transition = 'visibility 0s, opacity 0.5s linear';
@@ -167,12 +172,12 @@ function closePopUp() {
 }
 
 function reserveRoom() {
-    if (!activeRoom) {
+    if (!activeApartment) {
         return;
     }
 
-    if (!activeRoom.reservedDates) {
-        activeRoom.reservedDates = [];
+    if (!activeApartment.reservedDates) {
+        activeApartment.reservedDates = [];
     }
 
     var name = document.querySelector('#guest_name').value;
@@ -189,7 +194,7 @@ function reserveRoom() {
         endDate: endDate
     };
 
-    activeRoom.reservedDates.push(guestReservation);
-    updateReservationsJSON('put', JSON.stringify(rooms));
+    activeApartment.reservedDates.push(guestReservation);
+    updateReservationsJSON('put', JSON.stringify(allApartments));
     closePopUp();
 }

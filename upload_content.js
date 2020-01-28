@@ -7,7 +7,7 @@ function showContent(link, scriptLink) {
 
     http.onreadystatechange = function () { //обработчик событий который вызывается при изменении состояния запроса
         if(http.readyState === 4) { //состояние документа 4 - завершён
-            cont.innerHTML = http.responseText;
+            cont.innerHTML = http.responseText; //результирующий докумен в виде текста
             window.scrollTo(0,0);
 
             if (scriptLink) {

@@ -1,12 +1,7 @@
 //function for images slide show on the main page
 function imagesGalleryHomePage() {
-    var images = [];
+    var images = ["Images/main page/main_1.jpg", "Images/main page/main_2.jpg", "Images/main page/main_3.jpg", "Images/main page/main_4.jpg"];
     var i = 0;
-
-    images[0] = "Images/main page/main_1.jpg";
-    images[1] = "Images/main page/main_2.jpg";
-    images[2] = "Images/main page/main_3.jpg";
-    images[3] = "Images/main page/main_4.jpg";
 
     return function() {
         var imgMain = document.querySelector('.img_main');
